@@ -18,7 +18,7 @@ if($proyecto === FALSE){
 	<title>Registrar persona</title>
 </head>
 <body>
-	<form method="post" action="guardarDatosEditados.php">
+	<form method="post" action="actualizar.php">
 		<input type="hidden" name="id" value="<?php echo $proyecto->id; ?>">
         <br>
 		<label for="nombre">Nombre:</label>
