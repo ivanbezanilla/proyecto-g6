@@ -1,5 +1,5 @@
 <?php
-include_once "/proyecto-g6/proyecto/bd/base_de_datos.php";
+include_once "/bd/base_de_datos.php";
 $sentencia = $base_de_datos->query("SELECT * FROM usuario;");
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
