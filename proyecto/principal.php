@@ -53,6 +53,14 @@ if (isset($_POST['cerrarsesion'])) {
             font-weight: bold;
         }
 
+        nav input {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
         section {
             padding: 20px;
             text-align: center;
