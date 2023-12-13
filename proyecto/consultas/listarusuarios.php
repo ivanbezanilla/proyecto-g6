@@ -38,8 +38,8 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 				<td><?php echo $proyecto->email ?></td>
                 <td><?php echo $proyecto->pass ?></td>
                 <td><?php echo $proyecto->tipo ?></td>
-				<td><a href="<?php echo "./consultas/editar.php?id=" . $proyecto->id?>">Editar</a></td>
-				<td><a href="<?php echo "./consultas/eliminar.php?id=" . $proyecto->id?>">Eliminar</a></td>
+				<td><a href="<?php echo "/editar.php?id=" . $proyecto->id?>">Editar</a></td>
+				<td><a href="<?php echo "/eliminar.php?id=" . $proyecto->id?>">Eliminar</a></td>
 			</tr>
 			<?php } ?>
 		</tbody>
