@@ -59,4 +59,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Cerrar la conexión
     $base_de_datos = null;
 }*/
+}
+$base_de_datos = null;
 ?>
