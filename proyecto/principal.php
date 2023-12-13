@@ -70,7 +70,7 @@ if (isset($_POST['cerrarsesion'])) {
         <a href="#galeria">Galería</a>
         <a href="#contacto">Contacto</a>
         <form method="post" action=""> 
-            <input type="submit" value="cerrarsesion">
+            <input type="submit" name="cerrarsesion">
         </form>
     </nav>
 
