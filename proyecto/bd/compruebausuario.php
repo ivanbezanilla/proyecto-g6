@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         session_start();
         $root_path = $_SERVER['DOCUMENT_ROOT'] . '/';
-        header("location: /proyecto-g6/proyecto/index.php");
+        header("location: /proyecto-g6/proyecto/principal.php");
         exit;
 
     } catch(PDOException $e) {

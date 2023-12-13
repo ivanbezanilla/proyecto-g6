@@ -7,14 +7,14 @@ if (!isset($_SESSION["usuario"])) {
 ?>
  
 <?php
-if (isset($_POST['cerrarSesion'])) {
+if (isset($_POST['cerrarsesion'])) {
     // Destruir todas las variables de sesión.
     $_SESSION = array();
  
     // Finalmente, destruir la sesión.
     session_destroy();
  
-    header("Location: /index.php");
+    header("Location: index.php");
     exit();
 }
 ?>
@@ -69,7 +69,9 @@ if (isset($_POST['cerrarSesion'])) {
         <a href="#cursos">Cursos</a>
         <a href="#galeria">Galería</a>
         <a href="#contacto">Contacto</a>
-        <a href="">Cerrar sesion</a>
+        <form method="post" action=""> 
+            <input type="submit" value="cerrarsesion">
+        </form>
     </nav>
 
     <section id="inicio">
