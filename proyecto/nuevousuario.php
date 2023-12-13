@@ -20,11 +20,11 @@
                 <br>
                 <input name="dni" required type="text" id="dni" placeholder="Escribe el dni">
                 <br><br>
-                <label for="sexo">Género</label>
-                <select name="sexo" required name="sexo" id="sexo">
-                    <option value="">--Selecciona--</option>
-                    <option value="M">Masculino</option>
-                    <option value="F">Femenino</option>
+                <label for="tipo">Privilegios</label>
+                <select name="tipo" required name="tipo" id="tipo">
+                    <option value="alumno">Alumno</option>
+                    <option value="profesor">Profesor</option>
+                    <option value="administracion">Administracion</option>
                 </select>
                 <br><br><input type="submit" value="Registrar">
             </fieldset>
