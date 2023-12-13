@@ -18,7 +18,7 @@
                 <br><br>
                 <label for="pass">Contraseña:</label>
                 <br>
-                <input name="pass" required type="text" id="pass" placeholder="Escribe tu contraseña">
+                <input name="pass" required type="password" id="pass" placeholder="Escribe tu contraseña">
                 <br><br>
                 <label for="email">Email:</label>
                 <br>
