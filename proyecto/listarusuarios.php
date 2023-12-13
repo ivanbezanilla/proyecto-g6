@@ -1,6 +1,10 @@
 <?php
 include_once "/proyecto-g6/proyecto/bd/base_de_datos.php";
+<<<<<<< HEAD
 $sentencia = $base_de_datos->query("SELECT * FROM usuario;");
+=======
+$sentencia = $base_de_datos->query("SELECT * FROM proyecto;");
+>>>>>>> ae3e0f93493dfd7d065a113d27dbfec9a82f6881
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
 
