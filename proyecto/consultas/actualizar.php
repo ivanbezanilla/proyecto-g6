@@ -7,9 +7,9 @@ include_once "../bd/base_de_datos.php";
 $id = $_POST["id"];
 $nombre = $_POST["nombre"];
 $apellidos = $_POST["apellidos"];
-$sexo = $_POST["email"];
+$email = $_POST["email"];
 $pass = $_POST["pass"];
-$pass = $_POST["tipo"];
+$tipo = $_POST["tipo"];
 
 $sentencia = $base_de_datos->prepare("UPDATE usuario SET nombre = ?, apellidos = ?, email = ?, pass = ?, tipo = ? WHERE id = ?;");
 $resultado = $sentencia->execute([$nombre, $apellidos, $email, $pass, $tipo, $id]);
