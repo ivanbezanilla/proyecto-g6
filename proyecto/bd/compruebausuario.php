@@ -13,10 +13,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         // Consulta SQL para buscar el usuario
-        $sql = "SELECT * FROM usuario WHERE email = :usuario AND pass = :contraseña";
+        $sql = "SELECT * FROM usuario WHERE email = :usuario AND pass = :password";
         $stmt = $base_de_datos->prepare($sql);
         $stmt->bindParam(':usuario', $usuario);
-        $stmt->bindParam(':contraseña', $password);
+        $stmt->bindParam(':password', $password);
         $stmt->execute();
         echo "Correcto";
 
