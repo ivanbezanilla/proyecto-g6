@@ -16,9 +16,9 @@
                 <br>
                 <input name="apellidos" required type="text" id="apellidos" placeholder="Escribe tus apellidos">
                 <br><br>
-                <label for="dni">DNI:</label>
+                <label for="email">Email:</label>
                 <br>
-                <input name="dni" required type="text" id="dni" placeholder="Escribe el dni">
+                <input name="email" required type="text" id="email" placeholder="Escribe tu email">
                 <br><br>
                 <label for="tipo">Privilegios</label>
                 <select name="tipo" required name="tipo" id="tipo">
