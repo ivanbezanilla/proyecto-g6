@@ -10,7 +10,7 @@ $apellidos = $_POST["apellidos"];
 $sexo = $_POST["email"];
 $pass = $_POST["pass"];
 $pass = $_POST["tipo"];
-
+/* hola */
 $sentencia = $base_de_datos->prepare("UPDATE proyecto SET nombre = ?, apellidos = ?, email = ?, pass = ?, tipo = ? WHERE id = ?;");
 $resultado = $sentencia->execute([$nombre, $apellidos, $email, $pass, $tipo, $id]);
 if($resultado === TRUE) echo "Los cambios se han guardado correctamente";
