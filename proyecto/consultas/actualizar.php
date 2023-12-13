@@ -1,6 +1,6 @@
 <?php
 if(
-	!isset($_POST["nombre"]) || !isset($_POST["apellidos"]) || !isset($_POST["email"]) || !isset($_POST["pass"]) || !isset($_POST["tipo"])
+	!isset($_POST["nombre"]) || !isset($_POST["apellidos"]) || !isset($_POST["email"]) || !isset($_POST["pass"]) || !isset($_POST["tipo"]) || !isset($_POST["id"])
 ) exit();
 
 include_once "../bd/base_de_datos.php";
