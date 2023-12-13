@@ -7,14 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Conexión a la base de datos usando PDO
     include_once 'base_de_datos.php';
-    $dsn = "mysql:host=nombre_del_host;dbname=nombre_de_la_base_de_datos;charset=utf8mb4";
-    $username = "tu_usuario";
-    $password_db = "tu_contraseña";
 
     try {
-        $pdo = new PDO($dsn, $username, $password_db);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         // Consulta SQL para buscar el usuario
         $sql = "SELECT * FROM usuario WHERE email = :usuario";
         $stmt = $pdo->prepare($sql);
