@@ -38,13 +38,13 @@ if($proyecto === FALSE){
 		<br>
 		<input value="<?php echo $proyecto->pass ?>" name="pass" required type="text" id="pass" placeholder="Escribe tu pass">
 		<br><br>
-		<label for="tipo">Tipo</label>
+		<label for="tipo">Privilegios</label>
 		<select name="tipo" required name="tipo" id="tipo">
 
 			<option value="">--Selecciona--</option>
-			<option <?php echo $proyecto->tipo === 'Alumno' ? "selected='selected'": "" ?> value="Alumno">Alumnno</option>
-			<option <?php echo $proyecto->tipo === 'Profesor' ? "selected='selected'": "" ?> value="Profesor">Profesor</option>
-            <option <?php echo $proyecto->tipo === 'Administrador' ? "selected='selected'": "" ?> value="Administrador">Administrador</option>
+			<option <?php echo $proyecto->tipo === 'alumno' ? "selected='selected'": "" ?> value="alumno">Alumnno</option>
+			<option <?php echo $proyecto->tipo === 'profesor' ? "selected='selected'": "" ?> value="profesor">Profesor</option>
+            <option <?php echo $proyecto->tipo === 'administrador' ? "selected='selected'": "" ?> value="administrador">Administrador</option>
 		</select>
 		<br><br><input type="submit" value="Guardar cambios">
 	</form>
