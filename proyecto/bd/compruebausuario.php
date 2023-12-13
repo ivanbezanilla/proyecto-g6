@@ -4,8 +4,8 @@ date_default_timezone_set('Europe/Madrid');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST["correo"];
     $password = $_POST["passw"];
-    echo "usuario";
-    echo "password";
+    echo "usuario: $usuario <br>";
+    echo "password: $pasword <br>";
 
     // Conexión a la base de datos usando PDO
     include_once 'base_de_datos.php';
