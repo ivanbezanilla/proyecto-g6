@@ -20,8 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':password', $password);
         $stmt->execute();
 
-        if ($consulta->rowCount() > 0) {
-            $row = $consulta->fetch(PDO::FETCH_ASSOC);
+        if ($stmt->rowCount() > 0) {
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
             $_SESSION['usuario'] = $row['nombre'];
 
         $root_path = $_SERVER['DOCUMENT_ROOT'] . '/';
