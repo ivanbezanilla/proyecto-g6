@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "password: $password <br>";
 
     // Conexión a la base de datos usando PDO
+
     session_start();
     include_once 'base_de_datos.php';
 
@@ -18,7 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':usuario', $usuario);
         $stmt->bindParam(':password', $password);
         $stmt->execute();
-        echo "conectado";
+
+        if ($consulta->rowCount() > 0) {
+            $row = $consulta->fetch(PDO::FETCH_ASSOC);
+            $_SESSION['usuario'] = $row['nombre'];
+
         $root_path = $_SERVER['DOCUMENT_ROOT'] . '/';
         header("location: /proyecto-g6/proyecto/principal.php");
         exit;
