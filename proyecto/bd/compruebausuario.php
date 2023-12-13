@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':usuario', $usuario);
         $stmt->bindParam(':password', $password);
         $stmt->execute();
-        
+        echo "conectado";
         $root_path = $_SERVER['DOCUMENT_ROOT'] . '/';
         header("location: /proyecto-g6/proyecto/principal.php");
         exit;
