@@ -1,4 +1,5 @@
 <?php
+session_start();
 date_default_timezone_set('Europe/Madrid');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -60,5 +61,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $base_de_datos = null;
 }*/
 }
-$base_de_datos = null;
 ?>
