@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
 
         // Comprobar si el usuario existe en la base de datos
-        if ($stmt->rowCount() > 0) {
+        if ($stmt->rowCount() == 1) {
             // Obtener los datos del usuario
             $fila = $stmt->fetch(PDO::FETCH_ASSOC);
             $nombre = $fila["nombre"];
