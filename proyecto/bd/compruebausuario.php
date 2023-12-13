@@ -12,13 +12,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         // Consulta SQL para buscar el usuario
+        $sql = "SELECT * FROM usuario WHERE email = :usuario AND pass = :contraseña";
+        $stmt = $base_de_datos->prepare($sql);
+        $stmt->bindParam(':usuario', $usuario);
+        $stmt->bindParam(':contraseña', $password);
+        $stmt->execute();
+        echo "Correcto";
+
+    } catch {
+        echo "Error: " . $e->getMessage();
+    }
+
+   /* try {
+        // Consulta SQL para buscar el usuario
         $sql = "SELECT * FROM usuario WHERE email = :usuario";
         $stmt = $base_de_datos->prepare($sql);
         $stmt->bindParam(':usuario', $usuario);
         $stmt->execute();
 
         // Comprobar si el usuario existe en la base de datos
-        if ($stmt->rowCount() == 1) {
+        if ($stmt->rowCount() > 0) {
             // Obtener los datos del usuario
             $fila = $stmt->fetch(PDO::FETCH_ASSOC);
             $nombre = $fila["nombre"];
@@ -45,5 +58,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Cerrar la conexión
     $base_de_datos = null;
-}
+}*/
 ?>
