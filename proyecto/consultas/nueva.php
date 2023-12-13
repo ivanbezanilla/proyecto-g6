@@ -10,10 +10,7 @@ $tipo = $_POST["tipo"];
 
 $sentencia = $base_de_datos->prepare("INSERT INTO usuario(nombre, apellidos, email, pass, tipo) VALUES (?, ?, ?, ?, ?);");
 $resultado = $sentencia->execute([$nombre, $apellidos, $email, $pass, $tipo]);
-/*$sentencia->bindParam(':nombre', $nombre);
-$sentencia->bindParam(':apellidos', $apellidos);
-$sentencia->bindParam(':password', $pass);
-$sentencia->bindParam(':tipo', $tipo);*/
+
 
 if($resultado === TRUE) echo "Se ha insertado correctamente";
 else echo "No se ha conseguido insertar, intentalo otra vez";

@@ -44,7 +44,7 @@ if($proyecto === FALSE){
 			<option <?php echo $proyecto->tipo === 'alumno' ? "selected='selected'": "" ?> value="alumno">Alumnno</option>
 			<option <?php echo $proyecto->tipo === 'profesor' ? "selected='selected'": "" ?> value="profesor">Profesor</option>
             <option <?php echo $proyecto->tipo === 'administrador' ? "selected='selected'": "" ?> value="administrador">Administrador</option>
-		</select>
+		</select> 
 		<br><br><input type="submit" value="Guardar cambios">
 	</form>
 </body>
