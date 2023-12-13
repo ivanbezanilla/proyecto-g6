@@ -20,9 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':password', $password);
         $stmt->execute();
 
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        $_SESSION['usuario'] = $row['nombre'];
-
         $root_path = $_SERVER['DOCUMENT_ROOT'] . '/';
         header("location: /proyecto-g6/proyecto/principal.php");
         exit;

@@ -1,12 +1,4 @@
 <?php
-session_start();
-if (!isset($_SESSION["usuario"])) {
-    header("Location: iniciar_sesion.php");
-    exit();
-}
-?>
-
-<?php
 if (isset($_POST['cerrarsesion'])) {
     // Destruir todas las variables de sesión.
     $_SESSION = array();
