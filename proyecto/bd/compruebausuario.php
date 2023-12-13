@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "password: $password <br>";
 
     // Conexión a la base de datos usando PDO
+    session_start();
     include_once 'base_de_datos.php';
 
     try {
@@ -18,7 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':password', $password);
         $stmt->execute();
         
-        session_start();
         $root_path = $_SERVER['DOCUMENT_ROOT'] . '/';
         header("location: /proyecto-g6/proyecto/principal.php");
         exit;
