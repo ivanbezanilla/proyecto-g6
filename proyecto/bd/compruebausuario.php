@@ -6,7 +6,7 @@ include "base_de_datos.php";
 $username = $_POST['correo'];
 $password = $_POST['passw'];
  
-$consulta = $conxBaseDatos->prepare("SELECT * FROM usuario WHERE email = :username AND pass = :password");
+$consulta = $base_de_datos->prepare("SELECT * FROM usuario WHERE email = :username AND pass = :password");
 $consulta->bindParam(':username', $username);
 $consulta->bindParam(':password', $password);
 $consulta->execute();
