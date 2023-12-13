@@ -2,7 +2,7 @@
 if(!isset($_GET["id"])) exit();
 $id = $_GET["id"];
 include_once "./bd/base_de_datos.php";
-$sentencia = $base_de_datos->prepare("SELECT * FROM proyecto WHERE id = ?;");
+$sentencia = $base_de_datos->prepare("SELECT * FROM usuario WHERE id = ?;");
 $sentencia->execute([$id]);
 $proyecto = $sentencia->fetch(PDO::FETCH_OBJ);
 if($proyecto === FALSE){
