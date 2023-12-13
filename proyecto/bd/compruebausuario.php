@@ -3,7 +3,7 @@ date_default_timezone_set('Europe/Madrid');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST["correo"];
-    $password = md5($_POST["passw"]);
+    $password = $_POST["passw"];
 
     // Conexión a la base de datos usando PDO
     include_once 'base_de_datos.php';
@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Consulta SQL para buscar el usuario
         $sql = "SELECT * FROM usuario WHERE email = :usuario";
-        $stmt = $pdo->prepare($sql);
+        $stmt = $base_de_datos->prepare($sql);
         $stmt->bindParam(':usuario', $usuario);
         $stmt->execute();
 
@@ -45,6 +45,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Cerrar la conexión
-    $pdo = null;
+    $base_de_datos = null;
 }
 ?>
