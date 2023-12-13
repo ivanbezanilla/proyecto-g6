@@ -32,9 +32,9 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 		<tbody>
 			<?php foreach($personas as $proyecto){ ?>
 			<tr>
-				<td><?php echo $proyecto->id ?></td>
-				<td><?php echo $proyecto->nombre ?></td>
-				<td><?php echo $proyecto->apellidos ?></td>
+				<td><?php echo $proyecto->ID ?></td>
+				<td><?php echo $proyecto->Nombre ?></td>
+				<td><?php echo $proyecto->Apellidos ?></td>
 				<td><?php echo $proyecto->email ?></td>
                 <td><?php echo $proyecto->pass ?></td>
                 <td><?php echo $proyecto->tipo ?></td>
