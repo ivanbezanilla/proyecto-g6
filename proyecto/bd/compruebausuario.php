@@ -1,12 +1,11 @@
 <?php
-session_start();
 date_default_timezone_set('Europe/Madrid');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST["correo"];
     $password = $_POST["passw"];
-    echo "usuario:$usuario <br>";
-    echo "password:$password <br>";
+    echo "usuario: $usuario <br>";
+    echo "password: $password <br>";
 
     // Conexión a la base de datos usando PDO
     include_once 'base_de_datos.php';
@@ -18,11 +17,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':usuario', $usuario);
         $stmt->bindParam(':password', $password);
         $stmt->execute();
-        echo "Correcto";
+        
+        session_start();
+        $root_path = $_SERVER['DOCUMENT_ROOT'] . '/';
+        header("location: /index.php");
+        exit;
 
     } catch(PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
-
 }
 ?>
