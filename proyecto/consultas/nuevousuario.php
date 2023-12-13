@@ -6,7 +6,7 @@
         <link rel="style" type="text/css" href="style.css">
     </head>
     <body>
-        <form method="post" action="nuevao.php">
+        <form method="post" action="nueva.php">
             <fieldset>
                 <label for="nombre">Nombre:</label>
                 <br>
