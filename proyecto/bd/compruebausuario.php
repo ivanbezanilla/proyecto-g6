@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
         echo "Correcto";
 
-    } catch {
+    } catch(PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
 
