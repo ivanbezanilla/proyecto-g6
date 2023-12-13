@@ -17,7 +17,7 @@ if ($consulta->rowCount() == 1) {
     $_SESSION['usuario'] = $row['nombre'];
     $_SESSION['contrasena'] = $row['contrasena'];
  
-    header("Location: ./principal.php");
+    header("Location: ../principal.php");
     exit();
  
 } else {
