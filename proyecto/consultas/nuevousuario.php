@@ -16,6 +16,10 @@
                 <br>
                 <input name="apellidos" required type="text" id="apellidos" placeholder="Escribe tus apellidos">
                 <br><br>
+                <label for="pass">Contraseña:</label>
+                <br>
+                <input name="pass" required type="text" id="pass" placeholder="Escribe tu contraseña">
+                <br><br>
                 <label for="email">Email:</label>
                 <br>
                 <input name="email" required type="text" id="email" placeholder="Escribe tu email">
