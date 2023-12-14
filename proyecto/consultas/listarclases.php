@@ -22,6 +22,34 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             height: 100vh;
         }
 
+        nav {
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad */
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centrar elementos del menú */
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff; /* Color del texto del menú */
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Cambiar color al pasar el cursor */
+        }
+
         header {
             text-align: center;
             margin-bottom: 20px; /* Ajusta el margen inferior */
