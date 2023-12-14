@@ -99,10 +99,16 @@ function generarMenu($tipoUsuario) {
         }
 
         /* Estilos para el menú */
+        nav {
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad */
+            padding: 10px 0;
+        }
+
         nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
+            text-align: center; /* Centrar elementos del menú */
         }
 
         nav ul li {
@@ -112,14 +118,13 @@ function generarMenu($tipoUsuario) {
 
         nav ul li a {
             text-decoration: none;
-            color: #333;
-            padding: 5px 10px;
-            border: 1px solid #ccc;
+            color: #fff; /* Color del texto del menú */
+            padding: 8px 15px;
             border-radius: 5px;
         }
 
         nav ul li a:hover {
-            background-color: #f0f0f0;
+            background-color: rgba(255, 255, 255, 0.2); /* Cambiar color al pasar el cursor */
         }
 
         section {
