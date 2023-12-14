@@ -75,11 +75,19 @@ if($proyecto === FALSE){
         input[type="submit"]:hover {
             background-color: #45a049;
         }
+
+        label[for="editar-usuario"] {
+            display: block;
+            text-align: center;
+            font-size: 24px; /* Cambiar el tamaño a tu gusto */
+            margin-bottom: 20px; /* Ajustar el margen inferior */
+        }
+
     </style>
 </head>
 <body>
     <form method="post" action="actualizar_usuario.php">
-        <input style="height: 20px;Editar usuario" >
+        <label for="editar-usuario" >Editar Clase</label>
         <input type="hidden" name="id" value="<?php echo $proyecto->id; ?>">
         <label for="nombre">Nombre:</label>
         <input value="<?php echo $proyecto->nombre ?>" name="nombre" required type="text" id="nombre" placeholder="Escribe tu nombre">
