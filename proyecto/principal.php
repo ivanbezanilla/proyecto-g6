@@ -48,13 +48,30 @@ if ($resultado->rowCount() > 0) { // Utiliza rowCount() en lugar de num_rows
     // Si se encuentra el usuario, obtén su tipo
     $fila = $resultado->fetch(PDO::FETCH_ASSOC);
     $tipoUsuario = $fila['tipo'];
-    
-    // Aquí puedes almacenar $tipoUsuario en una variable de sesión para su posterior uso en la página principal
+
 } else {
-    // Usuario no encontrado o correo incorrecto
      echo "Manejar la situación de inicio de sesión fallida";
 }
-echo "tipo usuario: $tipoUsuario";
+
+// Generar el menú de navegación basado en el tipo de usuario
+function generarMenu($tipoUsuario) {
+    $menu = '<ul>';
+    
+    // Elementos comunes para todos los tipos de usuarios
+    $menu .= '<li><a href="perfil.php">Perfil</a></li>';
+    $menu .= '<li><a href="clase.php">Clases</a></li>';
+    
+    // Elementos específicos para cada tipo de usuario
+    if ($tipoUsuario === 'profesor') {
+        $menu .= '<li><a href="alumnos.php">Alumnos</a></li>';
+    } elseif ($tipoUsuario === 'administrador') {
+        $menu .= '<li><a href="anadir_usuario.php">Añadir Usuario</a></li>';
+    }
+    
+    $menu .= '</ul>';
+    
+    return $menu;
+}
 
 ?>
 <!DOCTYPE html>
@@ -112,10 +129,10 @@ echo "tipo usuario: $tipoUsuario";
     </header>
 
     <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#cursos">Cursos</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contacto">Contacto</a>
+        <?php
+        // Mostrar el menú correspondiente al tipo de usuario
+        echo generarMenu($tipoUsuario);
+        ?>
         <form method="post" action=""> 
             <input type="submit" name="cerrarsesion" value="Cerrar sesion">
         </form>
