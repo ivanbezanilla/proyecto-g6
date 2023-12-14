@@ -12,10 +12,14 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
     <title>Tabla de usuarios</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
         }
 
         header {
