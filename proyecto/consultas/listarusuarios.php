@@ -7,29 +7,65 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<title>Tabla de usuarios</title>
-	<style>
-	table, th, td {
-	    border: 1px solid black;
-	}
-	</style>
+    <meta charset="UTF-8">
+    <title>Tabla de usuarios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-	<table>
-		<thead>
-			<tr>
-				<th>ID</th>
-				<th>Nombre</th>
-				<th>Apellidos</th>
-				<th>Email</th>
+    <h1>Tabla de usuarios</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Email</th>
                 <th>Pass</th>
                 <th>Tipo</th>
-				<th>Editar</th>
-				<th>Eliminar</th>
-			</tr>
-		</thead>
-		<tbody>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
 			<?php foreach($personas as $proyecto){ ?>
 			<tr>
 				<td><?php echo $proyecto->id ?></td>
