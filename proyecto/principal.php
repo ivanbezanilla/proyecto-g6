@@ -89,7 +89,7 @@ function generarMenu($tipoUsuario) {
         }
 
         header {
-            background-color: #333;
+            background-color: #4CAF50;
             color: #fff;
             padding: 10px;
             text-align: center;
