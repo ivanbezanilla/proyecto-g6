@@ -31,6 +31,7 @@ if($proyecto === FALSE){
         h1 {
             text-align: center;
             color: #333;
+            margin-top: 20px; /* Ajusta el margen superior */
         }
 
         form {
