@@ -29,6 +29,11 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             text-align: center;
         }
 
+        header, nav {
+            width: 100%;
+            display: block;
+        }
+
         nav {
             background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad */
             padding: 10px 0;
