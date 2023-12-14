@@ -114,7 +114,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
         </ul>
     </nav>
     <h1>Tabla de clases</h1>
-    <a href="./nueva_clase.php">Nueva clase</a>
+    <a href="./nuevaclase.php">Nueva clase</a>
     <table>
         <thead>
             <tr>
