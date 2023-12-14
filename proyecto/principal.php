@@ -59,13 +59,15 @@ function generarMenu($tipoUsuario) {
     
     // Elementos comunes para todos los tipos de usuarios
     $menu .= '<li><a href="perfil.php">Perfil</a></li>';
-    $menu .= '<li><a href="clase.php">Clases</a></li>';
     
     // Elementos específicos para cada tipo de usuario
     if ($tipoUsuario === 'profesor') {
-        $menu .= '<li><a href="alumnos.php">Alumnos</a></li>';
+        $menu .= '<li><a href="alumnos.php">Alumnos en sus clases</a></li>';
+        $menu .= '<li><a href="clase.php">Clases</a></li>';
     } elseif ($tipoUsuario === 'administrador') {
         $menu .= '<li><a href="anadir_usuario.php">Añadir Usuario</a></li>';
+    } elseif ($tipoUsuario === 'alumno') {
+        $menu .= '<li><a href="clase.php">Clases</a></li>';
     }
     
     $menu .= '</ul>';
@@ -89,7 +91,7 @@ function generarMenu($tipoUsuario) {
         }
 
         header {
-            background-color: #333;
+            background-color: #4CAF50;
             color: #fff;
             padding: 10px;
             text-align: center;
