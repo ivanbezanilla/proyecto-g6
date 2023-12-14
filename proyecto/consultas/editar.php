@@ -39,6 +39,7 @@ if($proyecto === FALSE){
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: auto; /* Para centrar el formulario */
         }
 
         label {
