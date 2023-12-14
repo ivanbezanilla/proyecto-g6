@@ -61,7 +61,7 @@
                 include_once "../bd/base_de_datos.php";
  
                 // Consultar la lista de profesores
-                $result = $base_de_datos->query("SELECT id, CONCAT(nombre, ' ', apellidos,) AS info_alumno FROM usuario WHERE tipo = 'alumno'");
+                $result = $base_de_datos->query("SELECT id, CONCAT(nombre, ' ', apellidos,) AS info_alumno FROM usuario");
  
                  // Mostrar opciones en el campo desplegable
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
