@@ -71,7 +71,7 @@
     </style>
 </head>
 <body>
-    <form method="post" action="nueva.php">
+    <form method="post" action="aplicar_nuevo_usuario.php">
         <fieldset>
             <label for="nombre">Nombre:</label>
             <br>
