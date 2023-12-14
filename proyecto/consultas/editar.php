@@ -28,6 +28,11 @@ if($proyecto === FALSE){
             height: 100vh;
         }
 
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
         form {
             width: 50%;
             padding: 20px;
@@ -67,11 +72,6 @@ if($proyecto === FALSE){
 
         input[type="submit"]:hover {
             background-color: #45a049;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
         }
     </style>
 </head>
