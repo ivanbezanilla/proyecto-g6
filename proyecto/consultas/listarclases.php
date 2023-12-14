@@ -1,6 +1,6 @@
 <?php
 include "../bd/base_de_datos.php";
-$sentencia = $base_de_datos->query("SELECT * FROM clases;");
+$sentencia = $base_de_datos->query("SELECT * FROM clase;");
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
 
