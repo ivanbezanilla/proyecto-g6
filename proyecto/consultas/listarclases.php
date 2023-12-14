@@ -126,7 +126,8 @@ if (isset($_POST['cerrarsesion'])) {
             <input type="submit" name="cerrarsesion" value="Cerrar sesion">
         </form>
     </nav>
-        <h1>Tabla de usuarios</h1>
+    <h1>Tabla de usuarios</h1>
+    <a href="./"
     <table>
         <thead>
             <tr>
@@ -149,7 +150,7 @@ if (isset($_POST['cerrarsesion'])) {
                 <td><?php echo $proyecto->Hora ?></td>
                 <td><?php echo $proyecto->Capacidad ?></td>
                 <td><?php echo $proyecto->Profesor ?></td>
-                <td><a href="<?php echo "./editar_clase.php?id=" . $proyecto->id?>">Editar</a></td>
+                <td><a href="<?php echo "editar_clase.php?id=" . $proyecto->id?>">Editar</a></td>
                 <td><a href="<?php echo "./eliminar_clase.php?id=" . $proyecto->id?>">Eliminar</a></td>
             </tr>
             <?php } ?>
