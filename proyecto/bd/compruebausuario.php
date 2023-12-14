@@ -22,7 +22,7 @@ if ($consulta->rowCount() == 1) {
  
 } else {
     echo "Usuario o contraseña incorrectos";
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit();
 }
 ?>
