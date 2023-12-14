@@ -66,9 +66,6 @@ if ($resultado->rowCount() > 0) { // Utiliza rowCount() en lugar de num_rows
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            background-image: url('imagen.jpg');
-            background-size: cover;
-            background-attachment: fixed;
         }
 
         header {
@@ -78,8 +75,9 @@ if ($resultado->rowCount() > 0) { // Utiliza rowCount() en lugar de num_rows
             text-align: center;
         }
 
+        /* Estilos para el menú */
         nav {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad */
             padding: 10px 0;
         }
 
@@ -87,7 +85,7 @@ if ($resultado->rowCount() > 0) { // Utiliza rowCount() en lugar de num_rows
             list-style-type: none;
             margin: 0;
             padding: 0;
-            text-align: center;
+            text-align: center; /* Centrar elementos del menú */
         }
 
         nav ul li {
@@ -97,19 +95,19 @@ if ($resultado->rowCount() > 0) { // Utiliza rowCount() en lugar de num_rows
 
         nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #fff; /* Color del texto del menú */
             padding: 8px 15px;
             border-radius: 5px;
         }
 
         nav ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.2); /* Cambiar color al pasar el cursor */
         }
 
         form {
-            float: right;
-            margin-top: 10px;
-            margin-right: 20px;
+            float: right; /* Para alinear a la derecha */
+            margin-top: 10px; /* Agrega espacio entre el menú y el formulario */
+            margin-right: 20px; /* Margen derecho para separarlo del borde de la página */
         }
 
         input[type="submit"] {
@@ -120,22 +118,9 @@ if ($resultado->rowCount() > 0) { // Utiliza rowCount() en lugar de num_rows
             cursor: pointer;
         }
 
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
         section {
             padding: 20px;
             text-align: center;
-        }
-
-        h2, p {
-            color: #333;
-        }
-
-        img {
-            width: 100%;
-            max-width: 600px;
         }
     </style>
 </head>
@@ -147,22 +132,40 @@ if ($resultado->rowCount() > 0) { // Utiliza rowCount() en lugar de num_rows
     <nav>
         <ul>
             <?php
+            // Lógica para generar el menú según el tipo de usuario
             function generarMenu($tipoUsuario) {
-                // ...
+                $menu = '';
+                // Elementos comunes para todos los tipos de usuarios
+                $menu .= '<li><a href="perfil.php">Perfil</a></li>';
+                
+                // Elementos específicos para cada tipo de usuario
+                if ($tipoUsuario === 'profesor') {
+                    $menu .= '<li><a href="alumnos.php">Alumnos en sus clases</a></li>';
+                    $menu .= '<li><a href="clase.php">Clases</a></li>';
+                } elseif ($tipoUsuario === 'administrador') {
+                    $menu .= '<li><a href="consultas/listarusuarios.php">Usuarios</a></li>';
+                    $menu .= '<li><a href="anadir_clases.php">Añadir Clases</a></li>';
+                } elseif ($tipoUsuario === 'alumno') {
+                    $menu .= '<li><a href="clase.php">Clases</a></li>';
+                }
+
+                return $menu;
             }
 
+            // Generar el menú según el tipo de usuario
             echo generarMenu($tipoUsuario);
             ?>
         </ul>
         <form method="post" action=""> 
-            <input type="submit" name="cerrarsesion" value="Cerrar sesión">
+            <input type="submit" name="cerrarsesion" value="Cerrar sesion">
         </form>
     </nav>
 
     <section id="inicio">
         <h2>Bienvenido a nuestra Academia de Pintura</h2>
         <p>Descubre el arte de la pintura con nosotros.</p>
-        <img src="imagen.jpg" alt="imagen">
+        <img src="imagen.jpg" alt="imagen" style="width: 100%; max-width: 600px;">
+    </section>
     </section>
 
     <section id="cursos">
