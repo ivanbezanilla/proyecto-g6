@@ -137,8 +137,8 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
                 <td><?php echo $proyecto->Hora ?></td>
                 <td><?php echo $proyecto->Capacidad ?></td>
                 <td><?php echo $proyecto->Profesor ?></td>
-                <td><a href="<?php echo "./editar_clase.php?id=" . $proyecto->id?>">Editar</a></td>
-                <td><a href="<?php echo "./eliminar_clase.php?id=" . $proyecto->id?>">Eliminar</a></td>
+                <td><a href="<?php echo "./editar_clase.php?id=" . $proyecto->ID?>">Editar</a></td>
+                <td><a href="<?php echo "./eliminar_clase.php?id=" . $proyecto->ID?>">Eliminar</a></td>
             </tr>
             <?php } ?>
         </tbody>
