@@ -7,7 +7,7 @@ $fecha = $_POST["fecha"];
 $hora = $_POST["hora"];
 $capacidad = $_POST["capacidad"];
 
-$sentencia = $base_de_datos->prepare("INSERT INTO clase(nombre, fecha, hora, capacidad) VALUES (?, ?, ?, ?, ?);");
+$sentencia = $base_de_datos->prepare("INSERT INTO clase(Nombre, Fecha, Hora, Capacidad) VALUES (?, ?, ?, ?, ?);");
 $resultado = $sentencia->execute([$nombre, $fecha, $hora, $capacidad]);
 
 
