@@ -55,6 +55,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
     <div>
     <h1>Tabla de usuarios</h1>
     </div>
+    <br> <br> <br> <br> <br>
     <table>
         <thead>
             <tr>
