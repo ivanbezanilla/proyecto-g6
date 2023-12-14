@@ -59,6 +59,7 @@
                 <?php
                 // Conectar a la base de datos
                 include_once "../bd/base_de_datos.php";
+                echo "OK";
  
                 // Consultar la lista de profesores
                 $result = $base_de_datos->query("SELECT id, CONCAT(nombre, ' ', apellidos,) AS info_alumno FROM usuario");
