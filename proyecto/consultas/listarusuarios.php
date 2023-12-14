@@ -12,14 +12,17 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
     <title>Tabla de usuarios</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
         }
 
         nav {
@@ -48,11 +51,6 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 
         nav ul li a:hover {
             background-color: rgba(255, 255, 255, 0.2); /* Cambiar color al pasar el cursor */
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 20px; /* Ajusta el margen inferior */
         }
 
         table {
@@ -89,7 +87,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             border: none;
             cursor: pointer;
         }
-        
+
     </style>
 </head>
 <body>
