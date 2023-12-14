@@ -82,9 +82,21 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             color: #333;
             margin-top: 20px; /* Ajusta el margen superior */
         }
+
+        input[type="submit"] {
+            padding: 8px 15px;
+            border-radius: 5px;
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
+    <header>
+        <h1>Academia de Pintura</h1>
+    </header>
     <nav>
         <ul>
             <li><a href="../principal.php">Inicio</a></li>
@@ -96,9 +108,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             <input type="submit" name="cerrarsesion" value="Cerrar sesion">
         </form>
     </nav>
-    <header>
         <h1>Tabla de usuarios</h1>
-    </header>
     <table>
         <thead>
             <tr>
