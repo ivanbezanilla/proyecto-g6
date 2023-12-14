@@ -1,8 +1,11 @@
 <?php
 if(
 	!isset($_POST["nombre"]) || !isset($_POST["fecha"]) || !isset($_POST["hora"]) || !isset($_POST["capacidad"]) || !isset($_POST["profesor"]) || !isset($_POST["id"])
-) exit() else(echo"Todo correcto");
-
+) {
+    exit();
+} else {
+    echo "todo bien";
+}
 include_once "../bd/base_de_datos.php";
 $id = $_POST["id"];
 $nombre = $_POST["nombre"];
