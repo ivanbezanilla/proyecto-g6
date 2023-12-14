@@ -66,6 +66,7 @@ function generarMenu($tipoUsuario) {
         $menu .= '<li><a href="clase.php">Clases</a></li>';
     } elseif ($tipoUsuario === 'administrador') {
         $menu .= '<li><a href="anadir_usuario.php">Añadir Usuario</a></li>';
+        $menu .= '<li><a href="anadir_clases.php">Añadir Clases</a></li>';
     } elseif ($tipoUsuario === 'alumno') {
         $menu .= '<li><a href="clase.php">Clases</a></li>';
     }
