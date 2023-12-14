@@ -72,8 +72,8 @@
 </head>
 <body>
     <form method="post" action="nueva.php">
+    <h1>Registrar usuarios</h1>
         <fieldset>
-        <label style="height: 20px;Registrar usuarios" >
             <label for="nombre">Nombre:</label>
             <br>
             <input name="nombre" required type="text" id="nombre" placeholder="Escribe tu nombre">
