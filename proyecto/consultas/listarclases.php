@@ -12,10 +12,14 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
     <title>Tabla de usuarios</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /*height: 100vh;*/
         }
 
         header {
@@ -23,6 +27,11 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             color: #fff;
             padding: 10px;
             text-align: center;
+        }
+
+        header, nav {
+            width: 100%;
+            display: block;
         }
 
         nav {
@@ -100,7 +109,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             <li><a href="../principal.php">Inicio</a></li>
             <li><a href="../">Perfil</a></li>
             <li><a href="listarusuarios.php">Usuarios</a></li>
-            <li><a href="clases.php">Clases</a></li>
+            <li><a href="listarclases.php">Clases</a></li>
         </ul>
         <form method="post" action=""> 
             <input type="submit" name="cerrarsesion" value="Cerrar sesion">
