@@ -38,7 +38,7 @@ if (isset($_POST['cerrarsesion'])) {
     exit();
 }
 
-$correoUsuario = $username
+$correoUsuario = $username;
 
 // Consulta SQL para obtener el tipo de usuario
 $consulta2 = "SELECT tipo FROM usuarios WHERE correo = '$correoUsuario'";
