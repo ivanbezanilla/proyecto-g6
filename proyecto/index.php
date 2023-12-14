@@ -9,10 +9,8 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            background-image: url('imagen.jpg');
+            background: url('imagen.jpg') no-repeat center center fixed;
             background-size: cover;
-            background-attachment: fixed;
         }
 
         header {
@@ -71,6 +69,7 @@
         section {
             padding: 20px;
             text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
         }
 
         h2, p {
@@ -92,7 +91,6 @@
         <ul>
             <?php
             function generarMenu($tipoUsuario) {
-                // ...
             }
 
             echo generarMenu($tipoUsuario);
