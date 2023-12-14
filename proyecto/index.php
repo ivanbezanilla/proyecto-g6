@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,76 +11,32 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            background-image: url('imagen.jpg');
-            background-size: cover;
-            background-attachment: fixed;
         }
 
         header {
-            background-color: #4CAF50;
+            background-color: #333;
             color: #fff;
             padding: 10px;
             text-align: center;
         }
 
         nav {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px 0;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
+            background-color: #444;
+            padding: 10px;
             text-align: center;
         }
 
-        nav ul li {
-            display: inline-block;
-            margin-right: 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
+        nav a {
             color: #fff;
-            padding: 8px 15px;
-            border-radius: 5px;
-        }
-
-        nav ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        form {
-            float: right;
-            margin-top: 10px;
-            margin-right: 20px;
-        }
-
-        input[type="submit"] {
-            padding: 8px 15px;
-            border-radius: 5px;
-            background-color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            font-weight: bold;
         }
 
         section {
             padding: 20px;
             text-align: center;
-        }
-
-        h2, p {
-            color: #333;
-        }
-
-        img {
-            width: 100%;
-            max-width: 600px;
         }
     </style>
 </head>
@@ -89,23 +46,18 @@
     </header>
 
     <nav>
-        <ul>
-            <?php
-            function generarMenu($tipoUsuario) {
-            }
-
-            echo generarMenu($tipoUsuario);
-            ?>
-        </ul>
-        <form method="post" action=""> 
-            <input type="submit" name="cerrarsesion" value="Cerrar sesión">
-        </form>
+        <a href="#inicio">Inicio</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+        <a href="iniciar_sesion.php">Iniciar sesion</a>
     </nav>
 
     <section id="inicio">
         <h2>Bienvenido a nuestra Academia de Pintura</h2>
         <p>Descubre el arte de la pintura con nosotros.</p>
-        <img src="imagen.jpg" alt="imagen">
+        <img src="imagen.jpg" alt="imagen" style="width: 100%; max-width: 600px;">
+    </section>
     </section>
 
     <section id="cursos">
