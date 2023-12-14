@@ -15,7 +15,7 @@ if($proyecto === FALSE){
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registrar persona</title>
+    <title>Editar usuario</title>
     <style>
         body {
             font-family: Arial, sans-serif;
