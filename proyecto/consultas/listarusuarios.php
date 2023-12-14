@@ -4,6 +4,7 @@ $sentencia = $base_de_datos->query("SELECT * FROM usuario;");
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -66,19 +67,19 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             </tr>
         </thead>
         <tbody>
-			<?php foreach($personas as $proyecto){ ?>
-			<tr>
-				<td><?php echo $proyecto->id ?></td>
-				<td><?php echo $proyecto->nombre ?></td>
-				<td><?php echo $proyecto->apellidos ?></td>
-				<td><?php echo $proyecto->email ?></td>
+            <?php foreach($personas as $proyecto){ ?>
+            <tr>
+                <td><?php echo $proyecto->id ?></td>
+                <td><?php echo $proyecto->nombre ?></td>
+                <td><?php echo $proyecto->apellidos ?></td>
+                <td><?php echo $proyecto->email ?></td>
                 <td><?php echo $proyecto->pass ?></td>
                 <td><?php echo $proyecto->tipo ?></td>
-				<td><a href="<?php echo "./editar.php?id=" . $proyecto->id?>">Editar</a></td>
-				<td><a href="<?php echo "./eliminar.php?id=" . $proyecto->id?>">Eliminar</a></td>
-			</tr>
-			<?php } ?>
-		</tbody>
-	</table>
+                <td><a href="<?php echo "./editar.php?id=" . $proyecto->id?>">Editar</a></td>
+                <td><a href="<?php echo "./eliminar.php?id=" . $proyecto->id?>">Eliminar</a></td>
+            </tr>
+            <?php } ?>
+        </tbody>
+    </table>
 </body>
 </html>
