@@ -17,15 +17,19 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px; /* Ajusta el margen inferior */
         }
 
         table {
             border-collapse: collapse;
             width: 80%;
-            margin: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: #fff;
         }
@@ -48,14 +52,14 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
         h1 {
             text-align: center;
             color: #333;
+            margin-top: 20px; /* Ajusta el margen superior */
         }
     </style>
 </head>
 <body>
     <header>
-    <h1>Tabla de usuarios</h1>
+        <h1>Tabla de usuarios</h1>
     </header>
-    <br> <br> <br> <br> <br> <br> <br>
     <table>
         <thead>
             <tr>
