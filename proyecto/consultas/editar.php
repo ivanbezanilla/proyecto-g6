@@ -79,7 +79,7 @@ if($proyecto === FALSE){
 </head>
 <body>
     <form method="post" action="actualizar.php">
-        <h1>Editar usuario</h1>
+        <input style="height: 20px;Editar usuario" >
         <input type="hidden" name="id" value="<?php echo $proyecto->id; ?>">
         <label for="nombre">Nombre:</label>
         <input value="<?php echo $proyecto->nombre ?>" name="nombre" required type="text" id="nombre" placeholder="Escribe tu nombre">
