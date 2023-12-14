@@ -71,7 +71,7 @@ if($proyecto === FALSE){
             cursor: pointer;
             font-size: 18px;
         }
-
+/** */
         input[type="submit"]:hover {
             background-color: #45a049;
         }
