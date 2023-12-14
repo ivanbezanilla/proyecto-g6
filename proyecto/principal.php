@@ -136,17 +136,15 @@ if ($resultado->rowCount() > 0) { // Utiliza rowCount() en lugar de num_rows
             function generarMenu($tipoUsuario) {
                 $menu = '';
                 // Elementos comunes para todos los tipos de usuarios
-                $menu .= '<li><a href="principal.php">Inicio</a></li>';
                 $menu .= '<li><a href="perfil.php">Perfil</a></li>';
                 
                 // Elementos específicos para cada tipo de usuario
                 if ($tipoUsuario === 'profesor') {
+                    $menu .= '<li><a href="alumnos.php">Alumnos en sus clases</a></li>';
                     $menu .= '<li><a href="clase.php">Clases</a></li>';
-
                 } elseif ($tipoUsuario === 'administrador') {
                     $menu .= '<li><a href="consultas/listarusuarios.php">Usuarios</a></li>';
                     $menu .= '<li><a href="anadir_clases.php">Añadir Clases</a></li>';
-                    
                 } elseif ($tipoUsuario === 'alumno') {
                     $menu .= '<li><a href="clase.php">Clases</a></li>';
                 }
