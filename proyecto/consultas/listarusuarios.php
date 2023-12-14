@@ -57,32 +57,12 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
     </style>
 </head>
 <body>
-<nav>
+    <nav>
         <ul>
-            <?php
-            // Lógica para generar el menú según el tipo de usuario
-            function generarMenu($tipoUsuario) {
-                $menu = '';
-                // Elementos comunes para todos los tipos de usuarios
-                $menu .= '<li><a href="perfil.php">Perfil</a></li>';
-                
-                // Elementos específicos para cada tipo de usuario
-                if ($tipoUsuario === 'profesor') {
-                    $menu .= '<li><a href="alumnos.php">Alumnos en sus clases</a></li>';
-                    $menu .= '<li><a href="clase.php">Clases</a></li>';
-                } elseif ($tipoUsuario === 'administrador') {
-                    $menu .= '<li><a href="consultas/listarusuarios.php">Usuarios</a></li>';
-                    $menu .= '<li><a href="anadir_clases.php">Añadir Clases</a></li>';
-                } elseif ($tipoUsuario === 'alumno') {
-                    $menu .= '<li><a href="clase.php">Clases</a></li>';
-                }
-
-                return $menu;
-            }
-
-            // Generar el menú según el tipo de usuario
-            echo generarMenu($tipoUsuario);
-            ?>
+            <li><a href="../principal.php">Inicio</a></li>
+            <li><a href="../">Perfil</a></li>
+            <li><a href="listarusuarios.php">Usuarios</a></li>
+            <li><a href="clases.php">Clases</a></li>
         </ul>
         <form method="post" action=""> 
             <input type="submit" name="cerrarsesion" value="Cerrar sesion">
