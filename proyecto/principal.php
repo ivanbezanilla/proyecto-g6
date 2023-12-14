@@ -54,7 +54,7 @@ if ($resultado->rowCount() > 0) { // Utiliza rowCount() en lugar de num_rows
     // Usuario no encontrado o correo incorrecto
      echo "Manejar la situación de inicio de sesión fallida";
 }
-
+echo "tipo usuario: $tipoUsuario";
 
 ?>
 <!DOCTYPE html>
