@@ -78,24 +78,17 @@ if($proyecto === FALSE){
     </style>
 </head>
 <body>
-    <form method="post" action="actualizar_usuario.php">
-        <input style="height: 20px;Editar usuario" >
+    <form method="post" action="actualizar_clase.php">
+        <input style="height: 20px;Editar Clase" >
         <input type="hidden" name="id" value="<?php echo $proyecto->id; ?>">
         <label for="nombre">Nombre:</label>
         <input value="<?php echo $proyecto->nombre ?>" name="nombre" required type="text" id="nombre" placeholder="Escribe tu nombre">
         <label for="apellidos">Apellidos:</label>
-        <input value="<?php echo $proyecto->apellidos ?>" name="apellidos" required type="text" id="apellidos" placeholder="Escribe tus apellidos">
+        <input value="<?php echo $proyecto->apellidos ?>" name="fecha" required type="date" id="fecha">
         <label for="email">Email:</label>
-        <input value="<?php echo $proyecto->email ?>" name="email" required type="text" id="email" placeholder="Escribe tu email">
+        <input value="<?php echo $proyecto->email ?>" name="hora" required type="time" id="hora">
         <label for="pass">Pass:</label>
-        <input value="<?php echo $proyecto->pass ?>" name="pass" required type="text" id="pass" placeholder="Escribe tu pass">
-        <label for="tipo">Privilegios</label>
-        <select name="tipo" required name="tipo" id="tipo">
-            <option value="">--Selecciona--</option>
-            <option <?php echo $proyecto->tipo === 'alumno' ? "selected='selected'": "" ?> value="alumno">Alumno</option>
-            <option <?php echo $proyecto->tipo === 'profesor' ? "selected='selected'": "" ?> value="profesor">Profesor</option>
-            <option <?php echo $proyecto->tipo === 'administrador' ? "selected='selected'": "" ?> value="administrador">Administrador</option>
-        </select>
+        <input value="<?php echo $proyecto->pass ?>" name="capacidad" required type="int" id="capacidad">
         <input type="submit" value="Guardar cambios">
     </form>
 </body>
