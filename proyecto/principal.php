@@ -1,6 +1,26 @@
 <?php
 session_start();
 include_once "./bd/base_de_datos.php";
+//
+$username = $_POST['correo'];
+$password = $_POST['passw'];
+ 
+$consulta = $base_de_datos->prepare("SELECT * FROM usuario WHERE email = :username AND pass = :password");
+$consulta->bindParam(':username', $username);
+$consulta->bindParam(':password', $password);
+$consulta->execute();
+ 
+if ($consulta->rowCount() == 1) {
+ 
+    $row = $consulta->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['usuario'] = $row['nombre'];
+ 
+} else {
+    echo "Usuario o contraseña incorrectos";
+    header("Location: index.php");
+    exit();
+}
+//
 
 if (!isset($_SESSION["usuario"])) {
     header("Location: iniciar_sesion.php");
@@ -18,11 +38,11 @@ if (isset($_POST['cerrarsesion'])) {
     exit();
 }
 
-$correoUsuario = $_POST['correo']; // Obteniendo el correo del formulario de inicio de sesión
+$correoUsuario = $username;
 
 // Consulta SQL para obtener el tipo de usuario
-$consulta = "SELECT tipo FROM usuarios WHERE correo = '$correoUsuario'";
-$resultado = $conexion->query($consulta);
+$consulta = "SELECT tipo FROM usuario WHERE email = '$correoUsuario'";
+$resultado = $base_de_datos->query($consulta);
 
 if ($resultado->num_rows > 0) {
     // Si se encuentra el usuario, obtén su tipo
