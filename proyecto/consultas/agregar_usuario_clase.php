@@ -35,10 +35,10 @@
     <h1>Agregar Usuario a Clase</h1>
     <form method="post" action="procesar_agregar_usuario.php">
         <!-- Campo desplegable para seleccionar la clase -->
-        <div class="form-group">
+        <!--<div class="form-group">
             <label for="clase_id">Clase:</label>
             <select name="clase_id" id="clase_id" class="form-control" required>
-                <?php
+                <?php/*
                 // Conectar a la base de datos
                 include "../bd/base_de_datos.php";
  
@@ -48,10 +48,10 @@
                  // Mostrar opciones en el campo desplegable
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                     echo "<option value='{$row['id']}'>{$row['info_clase']}</option>";
-                }
+                }*/
                 ?>
             </select>
-        </div>
+        </div>-->
         <!-- Campo desplegable para seleccionar el alumno -->
         <div class="form-group">
             <label for="alumno_id">Alumno:</label>
