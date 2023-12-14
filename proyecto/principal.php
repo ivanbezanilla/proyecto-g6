@@ -1,7 +1,28 @@
 <?php
 session_start();
 include_once "./bd/base_de_datos.php";
-
+/*
+//
+$username = $_POST['correo'];
+$password = $_POST['passw'];
+ 
+$consulta = $base_de_datos->prepare("SELECT * FROM usuario WHERE email = :username AND pass = :password");
+$consulta->bindParam(':username', $username);
+$consulta->bindParam(':password', $password);
+$consulta->execute();
+ 
+if ($consulta->rowCount() == 1) {
+ 
+    $row = $consulta->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['usuario'] = $row['nombre'];
+ 
+} else {
+    echo "Usuario o contraseña incorrectos";
+    header("Location: index.php");
+    exit();
+}
+//
+*/
 if (!isset($_SESSION["usuario"])) {
     header("Location: iniciar_sesion.php");
     exit();
@@ -19,8 +40,21 @@ if (isset($_POST['cerrarsesion'])) {
 }
 
 $correoUsuario = $_SESSION['correo'];
-$tipoUsuario = $_SESSION['tipousuario'];
+$tipoUsuario = $_SESSION['tipo'];
+/*
+// Consulta SQL para obtener el tipo de usuario
+$consulta = "SELECT tipo FROM usuario WHERE email = '$correoUsuario'";
+$resultado = $base_de_datos->query($consulta);
 
+if ($resultado->rowCount() > 0) { // Utiliza rowCount() en lugar de num_rows
+    // Si se encuentra el usuario, obtén su tipo
+    $fila = $resultado->fetch(PDO::FETCH_ASSOC);
+    $tipoUsuario = $fila['tipo'];
+
+} else {
+     echo "Manejar la situación de inicio de sesión fallida";
+}
+*/
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -128,25 +162,6 @@ $tipoUsuario = $_SESSION['tipousuario'];
         <ul>
             <?php
             function generarMenu($tipoUsuario) {
-<<<<<<< HEAD
-=======
-                $menu = '';
-                // Elementos comunes para todos los tipos de usuarios
-                $menu .= '<li><a href="perfil.php">Perfil</a></li>';
-                
-                // Elementos específicos para cada tipo de usuario
-                if ($tipoUsuario === 'profesor') {
-                    $menu .= '<li><a href="alumnos.php">Alumnos en sus clases</a></li>';
-                    $menu .= '<li><a href="clase.php">Clases</a></li>';
-                } elseif ($tipoUsuario === 'administrador') {
-                    $menu .= '<li><a href="consultas/listarusuarios.php">Usuarios</a></li>';
-                    $menu .= '<li><a href="consultas/listarclases.php">Clases</a></li>';
-                } elseif ($tipoUsuario === 'alumno') {
-                    $menu .= '<li><a href="clase.php">Clases</a></li>';
-                }
-
-                return $menu;
->>>>>>> 1acd2d61abbe9d518b90247c5d8d84143436c4bd
             }
 
             echo generarMenu($tipoUsuario);
