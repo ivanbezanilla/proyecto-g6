@@ -44,9 +44,9 @@ $correoUsuario = $username;
 $consulta = "SELECT tipo FROM usuario WHERE email = '$correoUsuario'";
 $resultado = $base_de_datos->query($consulta);
 
-if ($resultado->num_rows > 0) {
+if ($resultado->rowCount() > 0) { // Utiliza rowCount() en lugar de num_rows
     // Si se encuentra el usuario, obtén su tipo
-    $fila = $resultado->fetch_assoc();
+    $fila = $resultado->fetch(PDO::FETCH_ASSOC);
     $tipoUsuario = $fila['tipo'];
     
     // Aquí puedes almacenar $tipoUsuario en una variable de sesión para su posterior uso en la página principal
@@ -54,6 +54,7 @@ if ($resultado->num_rows > 0) {
     // Usuario no encontrado o correo incorrecto
      echo "Manejar la situación de inicio de sesión fallida";
 }
+
 
 ?>
 <!DOCTYPE html>
