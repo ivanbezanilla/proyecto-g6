@@ -127,6 +127,20 @@ function generarMenu($tipoUsuario) {
             background-color: rgba(255, 255, 255, 0.2); /* Cambiar color al pasar el cursor */
         }
 
+        form {
+            float: right; /* Para alinear a la derecha */
+            margin-top: 10px; /* Agrega espacio entre el menú y el formulario */
+            margin-right: 20px; /* Margen derecho para separarlo del borde de la página */
+        }
+
+        input[type="submit"] {
+            padding: 8px 15px;
+            border-radius: 5px;
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        
         section {
             padding: 20px;
             text-align: center;
