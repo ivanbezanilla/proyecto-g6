@@ -98,26 +98,28 @@ function generarMenu($tipoUsuario) {
             text-align: center;
         }
 
-        nav {
-            background-color: #444;
-            padding: 10px;
-            text-align: center;
+        /* Estilos para el menú */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
         }
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px;
-            margin: 0 10px;
-            font-weight: bold;
+        nav ul li {
+            display: inline-block;
+            margin-right: 15px;
         }
 
-        nav input {
-            color: #fff;
+        nav ul li a {
             text-decoration: none;
-            padding: 10px;
-            margin: 0 10px;
-            font-weight: bold;
+            color: #333;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #f0f0f0;
         }
 
         section {
