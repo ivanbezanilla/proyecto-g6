@@ -2,6 +2,17 @@
 include "../bd/base_de_datos.php";
 $sentencia = $base_de_datos->query("SELECT * FROM clase;");
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
+
+if (isset($_POST['cerrarsesion'])) {
+    // Destruir todas las variables de sesión.
+    $_SESSION = array();
+ 
+    // Finalmente, destruir la sesión.
+    session_destroy();
+ 
+    header("Location: index.php");
+    exit();
+}
 ?>
 
 
