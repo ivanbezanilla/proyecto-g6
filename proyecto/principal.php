@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once "./bd/base_de_datos.php";
+/*
 //
 $username = $_POST['correo'];
 $password = $_POST['passw'];
@@ -21,11 +22,11 @@ if ($consulta->rowCount() == 1) {
     exit();
 }
 //
-
-/*if (!isset($_SESSION["usuario"])) {
+*/
+if (!isset($_SESSION["usuario"])) {
     header("Location: iniciar_sesion.php");
     exit();
-}*/
+}
 
 if (isset($_POST['cerrarsesion'])) {
     // Destruir todas las variables de sesión.
@@ -38,8 +39,9 @@ if (isset($_POST['cerrarsesion'])) {
     exit();
 }
 
-$correoUsuario = $username;
-
+$correoUsuario = $_SESSION['correo'];
+$tipoUsuario = $_SESSION['tipo'];
+/*
 // Consulta SQL para obtener el tipo de usuario
 $consulta = "SELECT tipo FROM usuario WHERE email = '$correoUsuario'";
 $resultado = $base_de_datos->query($consulta);
@@ -52,7 +54,7 @@ if ($resultado->rowCount() > 0) { // Utiliza rowCount() en lugar de num_rows
 } else {
      echo "Manejar la situación de inicio de sesión fallida";
 }
-
+*/
 ?>
 <!DOCTYPE html>
 <html lang="es">
