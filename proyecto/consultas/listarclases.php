@@ -3,16 +3,6 @@ include "../bd/base_de_datos.php";
 $sentencia = $base_de_datos->query("SELECT * FROM clase;");
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 
-if (isset($_POST['cerrarsesion'])) {
-    // Destruir todas las variables de sesión.
-    $_SESSION = array();
- 
-    // Finalmente, destruir la sesión.
-    session_destroy();
- 
-    header("Location: index.php");
-    exit();
-}
 ?>
 
 
@@ -122,9 +112,6 @@ if (isset($_POST['cerrarsesion'])) {
             <li><a href="listarusuarios.php">Usuarios</a></li>
             <li><a href="listarclases.php">Clases</a></li>
         </ul>
-        <form method="post" action=""> 
-            <input type="submit" name="cerrarsesion" value="Cerrar sesion">
-        </form>
     </nav>
     <h1>Tabla de usuarios</h1>
     <a href="./nueva_clase.php">Nueva clase</a>
@@ -150,7 +137,7 @@ if (isset($_POST['cerrarsesion'])) {
                 <td><?php echo $proyecto->Hora ?></td>
                 <td><?php echo $proyecto->Capacidad ?></td>
                 <td><?php echo $proyecto->Profesor ?></td>
-                <td><a href="<?php echo "editar_usuario.php?id=" . $proyecto->id?>">Editar</a></td>
+                <td><a href="<?php echo "./editar_clase.php?id=" . $proyecto->id?>">Editar</a></td>
                 <td><a href="<?php echo "./eliminar_clase.php?id=" . $proyecto->id?>">Eliminar</a></td>
             </tr>
             <?php } ?>
