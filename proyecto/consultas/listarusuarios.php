@@ -2,16 +2,6 @@
 include "../bd/base_de_datos.php";
 $sentencia = $base_de_datos->query("SELECT * FROM usuario;");
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
-if (isset($_POST['cerrarsesion'])) {
-    // Destruir todas las variables de sesión.
-    $_SESSION = array();
- 
-    // Finalmente, destruir la sesión.
-    session_destroy();
- 
-    header("Location: index.php");
-    exit();
-}
 ?>
 
 
@@ -120,9 +110,6 @@ if (isset($_POST['cerrarsesion'])) {
             <li><a href="listarusuarios.php">Usuarios</a></li>
             <li><a href="listarclases.php">Clases</a></li>
         </ul>
-        <form method="post" action=""> 
-            <input type="submit" name="cerrarsesion" value="Cerrar sesion">
-        </form>
     </nav>
     
     <h1>Tabla de usuarios</h1>
