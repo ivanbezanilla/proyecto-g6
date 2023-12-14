@@ -11,7 +11,7 @@ $hora = $_POST["hora"];
 $capacidad = $_POST["capacidad"];
 $profesor = $_POST["profesor"];
 
-$sentencia = $base_de_datos->prepare("UPDATE clase SET Nombre = ?, Fecha = ?, Hora = ?, Capacidad = ? WHERE id = ?;");
+$sentencia = $base_de_datos->prepare("UPDATE clase SET Nombre = ?, Fecha = ?, Hora = ?, Capacidad = ? WHERE ID = ?;");
 $resultado = $sentencia->execute([$nombre, $fecha, $hora, $capacidad, $id]);
 if($resultado === TRUE) echo "Los cambios se han guardado correctamente";
 else echo "No se ha conseguido guardar los cambios";
