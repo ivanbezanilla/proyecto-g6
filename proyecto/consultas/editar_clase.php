@@ -75,11 +75,19 @@ if($proyecto === FALSE){
         input[type="submit"]:hover {
             background-color: #45a049;
         }
+        
+        /* Estilos para centrar y hacer más grande el label */
+        label[for="editar-clase"] {
+            display: block;
+            text-align: center;
+            font-size: 24px; /* Cambiar el tamaño a tu gusto */
+            margin-bottom: 20px; /* Ajustar el margen inferior */
+        }
     </style>
 </head>
 <body>
     <form method="post" action="actualizar_clase.php">
-        <label style="height: 20px;" >Editar Clase</label>
+        <label for="editar-clase" >Editar Clase</label>
         <input type="hidden" name="id" value="<?php echo $proyecto->id; ?>">
         <label for="nombre">Nombre:</label>
         <input value="<?php echo $proyecto->nombre ?>" name="nombre" required type="text" id="nombre" placeholder="Escribe tu nombre">
