@@ -104,6 +104,7 @@ $tipoUsuario = $_SESSION['tipousuario'];
             function generarMenu($tipoUsuario) {
                 $menu = '';
                 // Elementos comunes para todos los tipos de usuarios
+                $menu .= '<li><a href="principal.php">Inicio</a></li>';
                 $menu .= '<li><a href="perfil.php">Perfil</a></li>';
                 
                 // Elementos específicos para cada tipo de usuario
