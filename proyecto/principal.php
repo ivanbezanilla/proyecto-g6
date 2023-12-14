@@ -14,7 +14,6 @@ if ($consulta->rowCount() == 1) {
  
     $row = $consulta->fetch(PDO::FETCH_ASSOC);
     $_SESSION['usuario'] = $row['nombre'];
-    $_SESSION['correo'] = $row['correo'];
  
 } else {
     echo "Usuario o contraseña incorrectos";
@@ -39,7 +38,7 @@ if (isset($_POST['cerrarsesion'])) {
     exit();
 }
 
-$correoUsuario = $_POST['correo']; // Obteniendo el correo del formulario de inicio de sesión
+$correoUsuario = $username
 
 // Consulta SQL para obtener el tipo de usuario
 $consulta = "SELECT tipo FROM usuarios WHERE correo = '$correoUsuario'";
