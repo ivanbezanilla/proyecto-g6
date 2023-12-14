@@ -101,6 +101,21 @@ $tipoUsuario = $_SESSION['tipousuario'];
         <ul>
             <?php
             function generarMenu($tipoUsuario) {
+                $menu = '';
+                // Elementos comunes para todos los tipos de usuarios
+                $menu .= '<li><a href="perfil.php">Perfil</a></li>';
+                
+                // Elementos específicos para cada tipo de usuario
+                if ($tipoUsuario === 'profesor') {
+                    $menu .= '<li><a href="clase.php">Clases</a></li>';
+                } elseif ($tipoUsuario === 'administrador') {
+                    $menu .= '<li><a href="consultas/listarusuarios.php">Usuarios</a></li>';
+                    $menu .= '<li><a href="consultas/listarclases.php">Clases</a></li>';
+                } elseif ($tipoUsuario === 'alumno') {
+                    $menu .= '<li><a href="clase.php">Clases</a></li>';
+                }
+
+                return $menu
             }
 
             echo generarMenu($tipoUsuario);
