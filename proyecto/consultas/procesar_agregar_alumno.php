@@ -4,7 +4,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Conectar a la base de datos
-    include "../bd/base_de_datos.php.php";
+    include "../bd/base_de_datos.php";
 
     // Recoger los datos del formulario
     $clase_id = $_POST['clase_id'];
