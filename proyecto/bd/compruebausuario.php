@@ -16,7 +16,7 @@ if ($consulta->rowCount() == 1) {
     $row = $consulta->fetch(PDO::FETCH_ASSOC);
     $_SESSION['usuario'] = $row['nombre'];
     $_SESSION['correo'] = $row['correo'];
-    $_SESSION['contrasena'] = $row['contrasena'];
+    $_SESSION['tipousuario'] = $row['tipo'];
  
     header("Location: ../principal.php");
     exit();
