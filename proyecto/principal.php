@@ -4,9 +4,7 @@ if (!isset($_SESSION["usuario"])) {
     header("Location: iniciar_sesion.php");
     exit();
 }
-?>
 
-<?php
 if (isset($_POST['cerrarsesion'])) {
     // Destruir todas las variables de sesión.
     $_SESSION = array();
@@ -17,6 +15,24 @@ if (isset($_POST['cerrarsesion'])) {
     header("Location: index.php");
     exit();
 }
+
+$correoUsuario = $_POST['correo']; // Obteniendo el correo del formulario de inicio de sesión
+
+// Consulta SQL para obtener el tipo de usuario
+$consulta = "SELECT tipo FROM usuarios WHERE correo = '$correoUsuario'";
+$resultado = $conexion->query($consulta);
+
+if ($resultado->num_rows > 0) {
+    // Si se encuentra el usuario, obtén su tipo
+    $fila = $resultado->fetch_assoc();
+    $tipoUsuario = $fila['tipo'];
+    
+    // Aquí puedes almacenar $tipoUsuario en una variable de sesión para su posterior uso en la página principal
+} else {
+    // Usuario no encontrado o correo incorrecto
+     echo "Manejar la situación de inicio de sesión fallida";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
