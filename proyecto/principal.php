@@ -33,9 +33,7 @@ $tipoUsuario = $_SESSION['tipousuario'];
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: url('imagen.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #333; /* Color del texto */
+            background-color: #f4f4f4;
         }
 
         header {
@@ -43,25 +41,19 @@ $tipoUsuario = $_SESSION['tipousuario'];
             color: #fff;
             padding: 10px;
             text-align: center;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
         }
 
+        /* Estilos para el menú */
         nav {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad */
             padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            top: 50px; /* Ajusta la posición según la altura del header */
-            z-index: 1000;
         }
 
         nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            text-align: center;
+            text-align: center; /* Centrar elementos del menú */
         }
 
         nav ul li {
@@ -71,19 +63,19 @@ $tipoUsuario = $_SESSION['tipousuario'];
 
         nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #fff; /* Color del texto del menú */
             padding: 8px 15px;
             border-radius: 5px;
         }
 
         nav ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.2); /* Cambiar color al pasar el cursor */
         }
 
         form {
-            float: right;
-            margin-top: 10px;
-            margin-right: 20px;
+            float: right; /* Para alinear a la derecha */
+            margin-top: 10px; /* Agrega espacio entre el menú y el formulario */
+            margin-right: 20px; /* Margen derecho para separarlo del borde de la página */
         }
 
         input[type="submit"] {
@@ -94,28 +86,9 @@ $tipoUsuario = $_SESSION['tipousuario'];
             cursor: pointer;
         }
 
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
         section {
             padding: 20px;
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.8);
-            margin: 10px; /* Margen para separar el contenido del borde */
-            border-radius: 10px; /* Bordes redondeados para el contenido */
-            margin-top: 110px; /* Ajusta la posición según la altura del header y la nav */
-        }
-
-        h2, p {
-            color: #333;
-        }
-
-        img {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto; /* Centrar la imagen */
-            display: block; /* Asegurar que la imagen se centre correctamente */
         }
     </style>
 </head>
