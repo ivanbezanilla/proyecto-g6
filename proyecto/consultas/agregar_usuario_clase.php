@@ -71,12 +71,6 @@
             </select>
         </div>
 
-        <label for="tipo_usuario">Tipo de Usuario (alumno o profesor):</label>
-        <select id="tipo_usuario" name="tipo_usuario" required>
-            <option value="alumno">Alumno</option>
-            <option value="profesor">Profesor</option>
-        </select>
-
         <input type="submit" value="Agregar a Clase">
     </form>
 </body>
