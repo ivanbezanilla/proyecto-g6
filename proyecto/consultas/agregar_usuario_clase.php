@@ -61,18 +61,15 @@
                 include_once "../bd/base_de_datos.php";
  
                 // Consultar la lista de profesores
-                $result = $base_de_datos->query("SELECT id, nombre FROM usuario");
+                $result = $base_de_datos->query("SELECT id, CONCAT(nombre, ' ', apellidos) AS info_alum FROM usuario");
  
                  // Mostrar opciones en el campo desplegable
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                    echo "<option value='{$row['id']}'>{$row['nombre']}</option>";
+                    echo "<option value='{$row['id']}'>{$row['info_alum']}</option>";
                 }
                 ?>
             </select>
         </div>
-
-        <label for="usuario_id">ID del Usuario:</label>
-        <input type="number" id="usuario_id" name="usuario_id" required>
 
         <label for="tipo_usuario">Tipo de Usuario (alumno o profesor):</label>
         <select id="tipo_usuario" name="tipo_usuario" required>
