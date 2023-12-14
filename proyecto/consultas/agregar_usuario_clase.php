@@ -33,7 +33,7 @@
 </head>
 <body>
     <h1>Agregar Usuario a Clase</h1>
-    <form method="post" action="procesar_agregar_usuario.php">
+    <form method="post" action="procesar_agregar_alumno.php">
         <!-- Campo desplegable para seleccionar la clase -->
         <div class="form-group">
             <label for="clase_id">Clase:</label>
