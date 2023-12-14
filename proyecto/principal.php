@@ -143,7 +143,7 @@ if ($resultado->rowCount() > 0) { // Utiliza rowCount() en lugar de num_rows
                     $menu .= '<li><a href="alumnos.php">Alumnos en sus clases</a></li>';
                     $menu .= '<li><a href="clase.php">Clases</a></li>';
                 } elseif ($tipoUsuario === 'administrador') {
-                    $menu .= '<li><a href="/consultas/nuevousuario.php">Añadir Usuario</a></li>';
+                    $menu .= '<li><a href="consultas/nuevousuario.php">Añadir Usuario</a></li>';
                     $menu .= '<li><a href="anadir_clases.php">Añadir Clases</a></li>';
                 } elseif ($tipoUsuario === 'alumno') {
                     $menu .= '<li><a href="clase.php">Clases</a></li>';
