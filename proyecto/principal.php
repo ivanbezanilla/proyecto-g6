@@ -53,7 +53,7 @@ if ($resultado->rowCount() > 0) { // Utiliza rowCount() en lugar de num_rows
      echo "Manejar la situación de inicio de sesión fallida";
 }
 
-// Generar el menú de navegación basado en el tipo de usuario
+/*// Generar el menú de navegación basado en el tipo de usuario
 function generarMenu($tipoUsuario) {
     $menu = '<ul>';
     
@@ -75,7 +75,7 @@ function generarMenu($tipoUsuario) {
     
     return $menu;
 }
-
+*/
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -132,10 +132,32 @@ function generarMenu($tipoUsuario) {
     </header>
 
     <nav>
-        <?php
-        // Mostrar el menú correspondiente al tipo de usuario
-        echo generarMenu($tipoUsuario);
-        ?>
+        <ul>
+            <?php
+            // Lógica para generar el menú según el tipo de usuario
+            function generarMenu($tipoUsuario) {
+                $menu = '';
+                // Elementos comunes para todos los tipos de usuarios
+                $menu .= '<li><a href="perfil.php">Perfil</a></li>';
+                
+                // Elementos específicos para cada tipo de usuario
+                if ($tipoUsuario === 'profesor') {
+                    $menu .= '<li><a href="alumnos.php">Alumnos en sus clases</a></li>';
+                    $menu .= '<li><a href="clase.php">Clases</a></li>';
+                } elseif ($tipoUsuario === 'administrador') {
+                    $menu .= '<li><a href="anadir_usuario.php">Añadir Usuario</a></li>';
+                    $menu .= '<li><a href="anadir_clases.php">Añadir Clases</a></li>';
+                } elseif ($tipoUsuario === 'alumno') {
+                    $menu .= '<li><a href="clase.php">Clases</a></li>';
+                }
+
+                return $menu;
+            }
+
+            // Generar el menú según el tipo de usuario
+            echo generarMenu($tipoUsuario);
+            ?>
+        </ul>
         <form method="post" action=""> 
             <input type="submit" name="cerrarsesion" value="Cerrar sesion">
         </form>
