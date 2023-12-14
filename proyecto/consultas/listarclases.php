@@ -127,7 +127,7 @@ if (isset($_POST['cerrarsesion'])) {
         </form>
     </nav>
     <h1>Tabla de usuarios</h1>
-    <a href="./"
+    <a href="./nueva_clase.php">Nueva clase</a>
     <table>
         <thead>
             <tr>
