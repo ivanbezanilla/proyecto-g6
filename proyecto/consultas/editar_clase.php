@@ -97,8 +97,8 @@ if($proyecto === FALSE){
         <input value="<?php echo $proyecto->hora ?>" name="hora" required type="time" id="hora">
         <label for="pass">Capacidad:</label>
         <input value="<?php echo $proyecto->capacidad ?>" name="capacidad" required type="number" id="capacidad">
-        <label for="pass">ID Profesor:</label>
-        <input value="<?php echo $proyecto->profesor ?>" name="profesor" required type="number" id="profesor">
+        <!--<label for="pass">ID Profesor:</label>
+        <input value="<?php echo $proyecto->profesor ?>" name="profesor" required type="number" id="profesor">-->
         <input type="submit" value="Guardar cambios">
     </form>
 </body>
