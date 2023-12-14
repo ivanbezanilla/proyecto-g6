@@ -83,12 +83,14 @@ if($proyecto === FALSE){
         <input type="hidden" name="id" value="<?php echo $proyecto->id; ?>">
         <label for="nombre">Nombre:</label>
         <input value="<?php echo $proyecto->nombre ?>" name="nombre" required type="text" id="nombre" placeholder="Escribe tu nombre">
-        <label for="apellidos">Apellidos:</label>
+        <label for="apellidos">Fecha:</label>
         <input value="<?php echo $proyecto->apellidos ?>" name="fecha" required type="date" id="fecha">
-        <label for="email">Email:</label>
+        <label for="email">Hora:</label>
         <input value="<?php echo $proyecto->email ?>" name="hora" required type="time" id="hora">
-        <label for="pass">Pass:</label>
+        <label for="pass">Capacidad:</label>
         <input value="<?php echo $proyecto->pass ?>" name="capacidad" required type="int" id="capacidad">
+        <label for="pass">ID Profesor:</label>
+        <input value="<?php echo $proyecto->profesor ?>" name="profesor" required type="int" id="profesor">
         <input type="submit" value="Guardar cambios">
     </form>
 </body>
