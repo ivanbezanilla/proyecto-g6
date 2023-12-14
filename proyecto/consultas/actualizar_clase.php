@@ -1,7 +1,7 @@
 <?php
 if(
 	!isset($_POST["nombre"]) || !isset($_POST["fecha"]) || !isset($_POST["hora"]) || !isset($_POST["capacidad"]) || !isset($_POST["profesor"]) || !isset($_POST["id"])
-) exit();
+) exit() else(echo"Todo correcto");
 
 include_once "../bd/base_de_datos.php";
 $id = $_POST["id"];
@@ -11,7 +11,7 @@ $hora = $_POST["hora"];
 $capacidad = $_POST["capacidad"];
 $profesor = $_POST["profesor"];
 
-$sentencia = $base_de_datos->prepare("UPDATE clase SET Nombre = ?, Fecha = ?, Hora = ?, Capacidad = ? WHERE ID = ?;");
+$sentencia = $base_de_datos->prepare("UPDATE clase SET nombre = ?, fecha = ?, hora = ?, capacidad = ? WHERE id = ?;");
 $resultado = $sentencia->execute([$nombre, $fecha, $hora, $capacidad, $id]);
 if($resultado === TRUE) echo "Los cambios se han guardado correctamente";
 else echo "No se ha conseguido guardar los cambios";
