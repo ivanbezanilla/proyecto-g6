@@ -116,8 +116,9 @@ $tipoUsuario = $_SESSION['tipousuario'];
                 }
 
                 return $menu
-            }
+            
 
+            }    
             echo generarMenu($tipoUsuario);
             ?>
         </ul>
