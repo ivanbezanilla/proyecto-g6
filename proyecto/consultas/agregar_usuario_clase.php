@@ -36,7 +36,7 @@
     <form method="post" action="procesar_agregar_usuario.php">
         <!-- Campo desplegable para seleccionar la clase -->
         <div class="form-group">
-            <label for="clase_id">Profesor:</label>
+            <label for="clase_id">Clase:</label>
             <select name="clase_id" id="clase_id" class="form-control" required>
                 <?php
                 // Conectar a la base de datos
@@ -54,7 +54,7 @@
         </div>
         <!-- Campo desplegable para seleccionar el alumno -->
         <div class="form-group">
-            <label for="alumno_id">Profesor:</label>
+            <label for="alumno_id">Alumno:</label>
             <select name="alumno_id" id="alumno_id" class="form-control" required>
                 <?php
                 // Conectar a la base de datos
