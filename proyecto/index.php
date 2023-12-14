@@ -9,33 +9,81 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: url('imagen.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333; /* Color del texto */
         }
 
         header {
-            background-color: #333;
+            background-color: #4CAF50;
             color: #fff;
             padding: 10px;
             text-align: center;
         }
 
         nav {
-            background-color: #444;
-            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
             text-align: center;
         }
 
-        nav a {
-            color: #fff;
+        nav ul li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
             text-decoration: none;
-            padding: 10px;
-            margin: 0 10px;
-            font-weight: bold;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        form {
+            float: right;
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+
+        input[type="submit"] {
+            padding: 8px 15px;
+            border-radius: 5px;
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
         }
 
         section {
             padding: 20px;
             text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 10px; /* Margen para separar el contenido del borde */
+            border-radius: 10px; /* Bordes redondeados para el contenido */
+        }
+
+        h2, p {
+            color: #333;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto; /* Centrar la imagen */
+            display: block; /* Asegurar que la imagen se centre correctamente */
         }
     </style>
 </head>
@@ -45,18 +93,23 @@
     </header>
 
     <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#cursos">Cursos</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contacto">Contacto</a>
-        <a href="iniciar_sesion.php">Iniciar sesion</a>
+        <ul>
+            <?php
+            function generarMenu($tipoUsuario) {
+            }
+
+            echo generarMenu($tipoUsuario);
+            ?>
+        </ul>
+        <form method="post" action=""> 
+            <input type="submit" name="cerrarsesion" value="Cerrar sesión">
+        </form>
     </nav>
 
     <section id="inicio">
         <h2>Bienvenido a nuestra Academia de Pintura</h2>
         <p>Descubre el arte de la pintura con nosotros.</p>
-        <img src="imagen.jpg" alt="imagen" style="width: 100%; max-width: 600px;">
-    </section>
+        <img src="imagen.jpg" alt="imagen">
     </section>
 
     <section id="cursos">
