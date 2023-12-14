@@ -41,8 +41,8 @@ if (isset($_POST['cerrarsesion'])) {
 $correoUsuario = $username;
 
 // Consulta SQL para obtener el tipo de usuario
-$consulta2 = "SELECT tipo FROM usuario WHERE email = '$correoUsuario'";
-$resultado = $base_de_datos->query($consulta2);
+$consulta = "SELECT tipo FROM usuario WHERE email = '$correoUsuario'";
+$resultado = $base_de_datos->query($consulta);
 
 if ($resultado->num_rows > 0) {
     // Si se encuentra el usuario, obtén su tipo
