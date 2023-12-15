@@ -108,7 +108,7 @@ $tipoUsuario = $_SESSION['tipousuario'];
                 $menu = '';
                 // Elementos comunes para todos los tipos de usuarios
                 $menu .= '<li><a href="principal.php">Inicio</a></li>';
-                $menu .= '<li><a href="usuarios/perfil.php">Perfil</a></li>';
+                $menu .= '<li><a href="usuarios/perfil.php?id=' . $id . '">Perfil</a></li>';
                 
                 // Elementos específicos para cada tipo de usuario
                 if ($tipoUsuario === 'profesor') {

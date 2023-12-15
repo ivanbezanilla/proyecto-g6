@@ -1,16 +1,12 @@
 <?php
 
-if (isset($_SESSION['usuario'], $_SESSION['correo'])) {
-    $nombre = $_SESSION['usuario'];
-    $correo = $_SESSION['correo'];
-    $apellidos = $_SESSION['apellidos'];
-    $id = $_SESSION['id'];
-    $tipo = $_SESSION['tipousuario'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+
 } else {
-    // Si la información no está disponible redirigimos al usuario
-    header("Location: principal.php");
-    exit();
+    echo "El ID de usuario no está definido en la sesión.";
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
