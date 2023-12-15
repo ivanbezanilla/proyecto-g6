@@ -7,6 +7,20 @@ if (isset($_GET['id'])) {
     echo "El ID de usuario no está definido en la sesión.";
 }
 
+include "../bd/base_de_datos.php"; 
+try {
+    $consulta = $base_de_datos->prepare("SELECT nombre, apellidos, correo FROM usuario WHERE id = ?");
+    $consulta->execute([$id]);
+    $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
+
+    $nombre = $usuario['nombre'];
+    $apellidos = $usuario['apellidos'];
+    $correo = $usuario['correo'];
+    $tipo = $usuario['tipo'];
+} catch (PDOException $e) {
+    echo "Error al ejecutar la consulta: " . $e->getMessage();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -77,7 +91,7 @@ if (isset($_GET['id'])) {
             <p><strong>Nombre:</strong> <?php echo $nombre; ?></p>
             <p><strong>Apellidos:</strong> <?php echo $apellidos; ?></p>
             <p><strong>Correo electrónico:</strong> <?php echo $correo; ?></p>
-            <p><strong>Rango de privilegios:</strong> <?php echo $id; ?></p>
+            <p><strong>Rango de privilegios:</strong> <?php echo $tipo; ?></p>
             <!-- Agrega más información del perfil si la tienes -->
 
             <!-- Un botón para regresar a la página principal -->
