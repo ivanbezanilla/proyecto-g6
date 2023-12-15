@@ -1,6 +1,6 @@
 <?php
 include "../bd/base_de_datos.php";
-$id = $_GET["id"];
+$id = $_POST["id"];
 $sentencia = $base_de_datos->prepare("SELECT * FROM clase WHERE id = ?;");
 $sentencia->execute([$id]);
 $personas = $sentencia -> fetchAll(PDO::FETCH_OBJ);
