@@ -101,12 +101,9 @@ $tipoUsuario = $_SESSION['tipousuario'];
     <nav>
         <ul>
             <?php
-            if (isset($_SESSION['id'])) {
-                $id = $_SESSION['id'];
-                echo "$id";
-            } else {
-                echo "El ID de usuario no está definido en la sesión.";
-            }
+            $id = $_SESSION['id'];
+            echo "$id";
+            
 
             // Lógica para generar el menú según el tipo de usuario
             function generarMenu($tipoUsuario) {
