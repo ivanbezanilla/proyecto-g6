@@ -1,18 +1,37 @@
 <?php
 include "../bd/base_de_datos.php";
-$id= 1;
+$id= $_POST["id"];
 $sentencia = $base_de_datos->query("SELECT * FROM clase WHERE id = ?;");
-$sentencia -> $bindParam(':id', $id, PDO::PARAM_INT);
-$sentencia -> execute();
+$sentencia->execute([$id]);
 
 $personas = $sentencia -> fetchAll(PDO::FETCH_OBJ);
 
-if (personas) {
-    foreach ($personas as $persona) {
-        echo "ID:" . $personas -> id . "<br>";
-        echo "Nombre:" . $persona -> nombre . "<br>";
-    }
-} else {
-    echo "No se encontraton resultados";
-}
 ?>
+<html>
+    <body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Email</th>
+                <th>Pass</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($personas as $proyecto){ ?>
+            <tr>
+                <td><?php echo $proyecto->id ?></td>
+                <td><?php echo $proyecto->nombre ?></td>
+                <td><?php echo $proyecto->apellidos ?></td>
+                <td><?php echo $proyecto->email ?></td>
+                <td><?php echo $proyecto->pass ?></td>
+                <td><?php echo $proyecto->tipo ?></td>
+            </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+    </body>
+</html>
