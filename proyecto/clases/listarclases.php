@@ -145,7 +145,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
     </table>
 
     <h1>Agregar Usuario a Clase</h1>
-    <form method="post" action="../consultas/procesar_agregar_alumno.php">
+    <form method="post" action="procesar_agregar_alumno.php">
         <!-- Campo desplegable para seleccionar la clase -->
         <div class="form-group">
             <label for="clase_id">Clase:</label>
