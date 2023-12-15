@@ -20,6 +20,7 @@ if ($consulta->rowCount() == 1) {
     $_SESSION['id'] = $row['id'];
  
     echo "usuario=$_SESSION[usuario]";
+    echo "id=$_SESSION[id]";
     //header("Location: ../principal.php");
     //exit();
  
