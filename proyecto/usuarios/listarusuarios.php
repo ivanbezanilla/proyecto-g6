@@ -118,9 +118,9 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             color: #333;
         }
 
-        input[type="text"],
-        input[type="password"],
-        select {
+        form input[type="text"],
+        form input[type="password"],
+        form select {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -128,11 +128,11 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             font-size: 16px;
         }
 
-        select {
+        form select {
             margin-top: 5px;
         }
 
-        input[type="submit"] {
+        form input[type="submit"] {
             background-color: #4CAF50;
             color: white;
             padding: 15px;
@@ -142,7 +142,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             font-size: 18px;
         }
 
-        input[type="submit"]:hover {
+        form input[type="submit"]:hover {
             background-color: #45a049;
         }
 
@@ -158,14 +158,11 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             <li><a href="../">Perfil</a></li>
             <li><a href="listarusuarios.php">Usuarios</a></li>
             <li><a href="../clases/listarclases.php">Clases</a></li>
-            <form method="post" action=""> 
-                <input type="submit" name="cerrarsesion" value="Cerrar sesion">
-            </form>
         </ul>
     </nav>
     
     <h1>Tabla de usuarios</h1>
-    <a href="./nuevousuario.php">Nuevo usuario</a>
+
     <table>
         <thead>
             <tr>
