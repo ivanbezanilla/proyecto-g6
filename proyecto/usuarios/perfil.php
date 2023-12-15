@@ -15,7 +15,7 @@ try {
 
     $nombre = $usuario['nombre'];
     $apellidos = $usuario['apellidos'];
-    $correo = $usuario['correo'];
+    $correo = $usuario['email'];
     $tipo = $usuario['tipo'];
 } catch (PDOException $e) {
     echo "Error al ejecutar la consulta: " . $e->getMessage();
