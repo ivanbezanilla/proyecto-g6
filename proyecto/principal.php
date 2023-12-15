@@ -21,7 +21,7 @@ if (isset($_POST['cerrarsesion'])) {
 $correoUsuario = $_SESSION['correo'];
 $tipoUsuario = $_SESSION['tipousuario'];
 //$id = $_POST['id'];
-echo "id= $correoUsuario";
+//echo "id= $correoUsuario";
 ?>
 <!DOCTYPE html>
 <html lang="es">
