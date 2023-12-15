@@ -21,10 +21,8 @@ if (isset($_POST['cerrarsesion'])) {
 $correoUsuario = $_SESSION['correo'];
 $tipoUsuario = $_SESSION['tipousuario'];
 $nombre = $_SESSION['usuario'];
-$correo = $_SESSION['correo'];
 $apellidos = $_SESSION['apellidos'];
 $id = $_SESSION['id'];
-$tipo = $_SESSION['tipousuario'];
 
 
 ?>
