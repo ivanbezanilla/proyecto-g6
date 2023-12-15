@@ -3,7 +3,7 @@ include "../bd/base_de_datos.php";
 $id= $_POST["id"];
 $sentencia = $base_de_datos->prepare("SELECT * FROM clase WHERE id = ?;");
 $sentencia -> bindParam (':id', $id, PDO::PARAM_INT);
-$sentencia->execute([$id]);
+$sentencia->execute();
 
 $personas = $sentencia -> fetchAll(PDO::FETCH_OBJ);
 
