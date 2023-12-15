@@ -15,7 +15,7 @@ if ($consulta->rowCount() == 1) {
  
     $row = $consulta->fetch(PDO::FETCH_ASSOC);
     $_SESSION['usuario'] = $row['nombre'];
-    $_SESSION['correo'] = $row['correo'];
+    $_SESSION['correo'] = $row['email'];
     $_SESSION['tipousuario'] = $row['tipo'];
     $_SESSION['id'] = $row['id'];
  
