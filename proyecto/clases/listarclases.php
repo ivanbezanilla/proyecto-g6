@@ -277,5 +277,26 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 
         <input type="submit" value="Agregar a la clase">
     </form>
+    <h1>Crear nueva clase</h1>
+    <form method="post" action="aplicar_nueva_clase.php">
+        <fieldset>
+            <label for="nombre">Nombre:</label>
+            <br>
+            <input name="nombre" required type="text" id="nombre" placeholder="Escribe el nombre de3 la clase">
+            <br><br>
+            <label for="fecha">Fecha:</label>
+            <br>
+            <input name="fecha" required type="date" id="fecha">
+            <br><br>
+            <label for="hora">Hora</label>
+            <br>
+            <input name="hora" required type="time" id="hora">
+            <br><br>
+            <label for="capacidad">Capacidad:</label>
+            <br>
+            <input name="capacidad" required type="number" id="capacidad">   
+            <br><br><input type="submit" value="Registrar">
+        </fieldset>
+    </form>
 </body>
 </html>
