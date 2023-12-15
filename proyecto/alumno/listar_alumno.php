@@ -8,7 +8,7 @@ if (isset($_GET['id'])) {
 }
 echo "$id";
 //$id = $_SESSION["id"];
-$sentencia = $base_de_datos->prepare("SELECT * FROM clase WHERE id = ?;");
+$sentencia = $base_de_datos->prepare("SELECT * FROM alumno_clase WHERE Alumno_id = ?;");
 $sentencia->execute([$id]);
 $personas = $sentencia -> fetchAll(PDO::FETCH_OBJ);
 
