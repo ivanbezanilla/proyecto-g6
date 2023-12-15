@@ -6,11 +6,14 @@ if (isset($_GET['id'])) {
 } else {
     echo "El ID de usuario no está definido en la sesión.";
 }
-echo "$id";
-//$id = $_SESSION["id"];
-$sentencia = $base_de_datos->prepare("SELECT a.* FROM clase a INNER JOIN alumno_clase b on a.id=b.Clase_ID WHERE b.Alumno_ID=?;");
-$sentencia->execute([$id]);
-$personas = $sentencia -> fetchAll(PDO::FETCH_OBJ);
+
+try {
+    $sentencia = $base_de_datos->prepare("SELECT a.* FROM clase a INNER JOIN alumno_clase b on a.id=b.Clase_ID WHERE b.Alumno_ID=?;");
+    $sentencia->execute([$id]);
+    $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
+} catch (PDOException $e) {
+    echo "Error al ejecutar la consulta: " . $e->getMessage();
+}
 
 ?>
 <html>
