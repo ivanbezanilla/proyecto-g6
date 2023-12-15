@@ -92,7 +92,7 @@ try {
             <!-- Agrega más información del perfil si la tienes -->
 
             <!-- Un botón para regresar a la página principal -->
-            <a href="principal.php" class="btn">Volver a la página principal</a>
+            <a href="../principal.php" class="btn">Volver a la página principal</a>
         </div>
     </div>
 </body>
