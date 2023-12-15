@@ -126,7 +126,6 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
                 <th>Nombre</th>
                 <th>Apellidos</th>
                 <th>Email</th>
-                <th>Pass</th>
                 <th>Tipo</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
@@ -139,7 +138,6 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
                 <td><?php echo $proyecto->nombre ?></td>
                 <td><?php echo $proyecto->apellidos ?></td>
                 <td><?php echo $proyecto->email ?></td>
-                <td><?php echo $proyecto->pass ?></td>
                 <td><?php echo $proyecto->tipo ?></td>
                 <td><a href="<?php echo "./editar_usuario.php?id=" . $proyecto->id?>">Editar</a></td>
                 <td><a href="<?php echo "./eliminar_usuario.php?id=" . $proyecto->id?>">Eliminar</a></td>
