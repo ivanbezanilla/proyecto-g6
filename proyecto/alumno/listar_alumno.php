@@ -1,7 +1,8 @@
 <?php
 include "../bd/base_de_datos.php";
+var_dump($_GET);
 if (isset($_GET["id"]) && !empty($_GET["id"]));
-$id = $_POST["id"];
+$id = $_GET["id"];
 $sentencia = $base_de_datos->prepare("SELECT * FROM clase WHERE id = ?;");
 $sentencia->execute([$id]);
 $personas = $sentencia -> fetchAll(PDO::FETCH_OBJ);
