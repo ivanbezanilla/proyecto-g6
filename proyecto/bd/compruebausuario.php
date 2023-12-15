@@ -18,11 +18,9 @@ if ($consulta->rowCount() == 1) {
     $_SESSION['correo'] = $row['email'];
     $_SESSION['tipousuario'] = $row['tipo'];
     $_SESSION['id'] = $row['id'];
- 
-    echo "usuario=$_SESSION[usuario]";
-    echo "id=$_SESSION[id]";
-    //header("Location: ../principal.php");
-    //exit();
+
+    header("Location: ../principal.php");
+    exit();
  
 } else {
     echo "Usuario o contraseña incorrectos";
