@@ -1,5 +1,4 @@
 <?php
-if(!isset($_POST["id"])) exit();
 include "../bd/base_de_datos.php";
 $id= $_POST["id"];
 $sentencia = $base_de_datos->prepare("SELECT * FROM clase WHERE id = ?;");
