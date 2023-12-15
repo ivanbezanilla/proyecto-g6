@@ -107,7 +107,6 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
     </header>
     <nav>
         <ul>
-            <li><a href="../">Retroceder</a></li>
             <li><a href="../principal.php">Inicio</a></li>
             <li><a href="../usuarios/perfil.php">Perfil</a></li>
             <li><a href="../usuarios/listarusuarios.php">Usuarios</a></li>
