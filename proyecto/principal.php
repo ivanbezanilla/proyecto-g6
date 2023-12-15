@@ -112,8 +112,8 @@ $tipoUsuario = $_SESSION['tipousuario'];
                     $menu .= '<li><a href="consultas/listarclases.php">Clases</a></li>';
 
                 } elseif ($tipoUsuario === 'administrador') {
-                    $menu .= '<li><a href="consultas/listarusuarios.php">Usuarios</a></li>';
-                    $menu .= '<li><a href="consultas/listarclases.php">Clases</a></li>';
+                    $menu .= '<li><a href="usuarios/listarusuarios.php">Usuarios</a></li>';
+                    $menu .= '<li><a href="clases/listarclases.php">Clases</a></li>';
                     $menu .= '<li><a href="consultas/agregar_usuario_clase.php">Agregar alumno a clases</a></li>';
 
                 } elseif ($tipoUsuario === 'alumno') {
