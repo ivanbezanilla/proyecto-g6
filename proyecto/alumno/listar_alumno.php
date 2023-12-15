@@ -1,11 +1,15 @@
 <?php
 include "../bd/base_de_datos.php";
-$id= $_GET["id"];
+if (isset($_GET["id"])) {
+    $id = $_GET["id"];
 $sentencia = $base_de_datos->prepare("SELECT * FROM clase WHERE id = ?;");
 $sentencia -> bindParam (':id', $id, PDO::PARAM_INT);
 $sentencia->execute([$id]);
-
 $personas = $sentencia -> fetchAll(PDO::FETCH_OBJ);
+} else {
+    echo "ID no proporcionado en la URL";
+    exit();
+}
 
 ?>
 <html>
