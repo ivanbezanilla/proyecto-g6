@@ -22,10 +22,11 @@ $correoUsuario = $_SESSION['correo'];
 $tipoUsuario = $_SESSION['tipousuario'];
 if (isset($_SESSION['id'])) {
     $idUsuario = $_SESSION['id'];
+    echo "$idUsuario";
 } else {
     echo "El ID de usuario no está definido en la sesión.";
 }
-echo "$idUsuario";
+
 
 ?>
 <!DOCTYPE html>
