@@ -20,7 +20,11 @@ if (isset($_POST['cerrarsesion'])) {
 
 $correoUsuario = $_SESSION['correo'];
 $tipoUsuario = $_SESSION['tipousuario'];
-$idUsuario = $_SESSION['id'];
+if (isset($_SESSION['id'])) {
+    $idUsuario = $_SESSION['id'];
+} else {
+    echo "El ID de usuario no está definido en la sesión.";
+}
 echo "$idUsuario";
 
 ?>
