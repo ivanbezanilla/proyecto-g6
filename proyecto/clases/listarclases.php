@@ -144,8 +144,8 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
         </tbody>
     </table>
 
-    <h1>Agregar Usuario a Clase</h1>
-    <form method="post" action="procesar_agregar_alumno.php">
+    <h1>Agregar alumno a una clase</h1>
+    <form method="post" action="procesar_agregar_usuario.php">
         <!-- Campo desplegable para seleccionar la clase -->
         <div class="form-group">
             <label for="clase_id">Clase:</label>
@@ -183,7 +183,49 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             </select>
         </div>
 
-        <input type="submit" value="Agregar a Clase">
+        <input type="submit" value="Agregar a la clase">
+    </form>
+
+    <h1>Agregar profesor a una clase</h1>
+    <form method="post" action="procesar_agregar_usuario.php">
+        <!-- Campo desplegable para seleccionar la clase -->
+        <div class="form-group">
+            <label for="clase_id">Clase:</label>
+            <select name="clase_id" id="clase_id" class="form-control" required>
+                <?php
+                // Conectar a la base de datos
+                include "../bd/base_de_datos.php";
+ 
+                // Consultar la lista de profesores
+                $result = $base_de_datos->query("SELECT id, CONCAT(nombre, ' ', fecha, ' - ', hora) AS info_clase FROM clase");
+ 
+                 // Mostrar opciones en el campo desplegable
+                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<option value='{$row['id']}'>{$row['info_clase']}</option>";
+                }
+                ?>
+            </select>
+        </div>
+        <!-- Campo desplegable para seleccionar el alumno -->
+        <div class="form-group">
+            <label for="alumno_id">Profesor:</label>
+            <select name="alumno_id" id="alumno_id" class="form-control" required>
+                <?php
+                // Conectar a la base de datos
+                include_once "../bd/base_de_datos.php";
+ 
+                // Consultar la lista de profesores
+                $result = $base_de_datos->query("SELECT id, CONCAT(nombre, ' ', apellidos) AS info_alum FROM usuario WHERE tipo = 'profesor'");
+ 
+                 // Mostrar opciones en el campo desplegable
+                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<option value='{$row['id']}'>{$row['info_alum']}</option>";
+                }
+                ?>
+            </select>
+        </div>
+
+        <input type="submit" value="Agregar a la clase">
     </form>
 </body>
 </html>
