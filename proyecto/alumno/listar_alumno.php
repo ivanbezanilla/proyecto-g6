@@ -121,10 +121,10 @@ $personas = $sentencia -> fetchAll(PDO::FETCH_OBJ);
             <?php foreach($personas as $proyecto){ ?>
             <tr>
                 <td><?php echo $proyecto->ID ?></td>
-                <td><?php echo $proyecto->nombre ?></td>
-                <td><?php echo $proyecto->fecha ?></td>
-                <td><?php echo $proyecto->hora ?></td>
-                <td><?php echo $proyecto->capacidad ?></td>
+                <td><?php echo $proyecto->Nombre ?></td>
+                <td><?php echo $proyecto->Fecha ?></td>
+                <td><?php echo $proyecto->Hora ?></td>
+                <td><?php echo $proyecto->Capacidad ?></td>
             </tr>
             <?php } ?>
         </tbody>
