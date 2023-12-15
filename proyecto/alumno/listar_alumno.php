@@ -1,6 +1,5 @@
 <?php
 include "../bd/base_de_datos.php";
-if (isset($_GET["id"]) && !empty($_GET["id"]));
 $id = $_GET["id"];
 $sentencia = $base_de_datos->prepare("SELECT * FROM clase WHERE id = ?;");
 $sentencia->execute([$id]);
