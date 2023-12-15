@@ -97,7 +97,7 @@ $tipoUsuario = $_SESSION['tipousuario'];
     <header>
         <h1>Academia de Pintura</h1>
     </header>
-
+    <h1>Mis clases</h1>
     <nav>
         <ul>
             <?php
