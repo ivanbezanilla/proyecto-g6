@@ -282,7 +282,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
         <fieldset>
             <label for="nombre">Nombre:</label>
             <br>
-            <input name="nombre" required type="text" id="nombre" placeholder="Escribe el nombre de3 la clase">
+            <input name="nombre" required type="text" id="nombre" placeholder="Escribe el nombre de la clase">
             <br><br>
             <label for="fecha">Fecha:</label>
             <br>
