@@ -8,7 +8,7 @@ if (isset($_GET['id'])) {
 }
 echo "$id";
 //$id = $_SESSION["id"];
-$sentencia = $base_de_datos->prepare("SELECT * FROM alumno_clase WHERE Alumno_id = ?;");
+$sentencia = $base_de_datos->prepare("SELECT a.* FROM clase a INNER JOIN alumno_clase b on a.id=b.Clase_ID WHERE b.Alumno_ID=?;");
 $sentencia->execute([$id]);
 $personas = $sentencia -> fetchAll(PDO::FETCH_OBJ);
 
