@@ -109,7 +109,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
         <ul>
             <li><a href="../principal.php">Inicio</a></li>
             <li><a href="../">Perfil</a></li>
-            <li><a href="listarusuarios.php">Usuarios</a></li>
+            <li><a href="../usuario/listarusuarios.php">Usuarios</a></li>
             <li><a href="listarclases.php">Clases</a></li>
         </ul>
     </nav>
