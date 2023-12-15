@@ -110,12 +110,11 @@ $personas = $sentencia -> fetchAll(PDO::FETCH_OBJ);
     <table>
         <thead>
             <tr>
-                <th>ID</th>
+                <th>ID Clase</th>
                 <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Email</th>
-                <th>Pass</th>
-                <th>Tipo</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Capacidad</th>
             </tr>
         </thead>
         <tbody>
@@ -123,10 +122,9 @@ $personas = $sentencia -> fetchAll(PDO::FETCH_OBJ);
             <tr>
                 <td><?php echo $proyecto->id ?></td>
                 <td><?php echo $proyecto->nombre ?></td>
-                <td><?php echo $proyecto->apellidos ?></td>
-                <td><?php echo $proyecto->email ?></td>
-                <td><?php echo $proyecto->pass ?></td>
-                <td><?php echo $proyecto->tipo ?></td>
+                <td><?php echo $proyecto->fecha ?></td>
+                <td><?php echo $proyecto->hora ?></td>
+                <td><?php echo $proyecto->capacidad ?></td>
             </tr>
             <?php } ?>
         </tbody>
