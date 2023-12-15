@@ -31,7 +31,7 @@ $personas = $sentencia -> fetchAll(PDO::FETCH_OBJ);
                 <td><?php echo $proyecto->email ?></td>
                 <td><?php echo $proyecto->pass ?></td>
                 <td><?php echo $proyecto->tipo ?></td>
-                <td><?php echo $proyecto->
+                <td><a href="<?php echo "./eliminar_usuario.php?id=" . $proyecto->id?>">Eliminar</a></td>
             </tr>
             <?php } ?>
         </tbody>
