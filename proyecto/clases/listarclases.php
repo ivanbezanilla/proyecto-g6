@@ -1,6 +1,6 @@
 <?php
 include "../bd/base_de_datos.php";
-$sentencia = $base_de_datos->query("SELECT a.id, a.nombre, a.fecha, a.hora, a.capacidad, CONCAT(c.nombre, ' ', c.apellidos) as profesor FROM clase a INNER JOIN alumno_clase b ON a.id=b.Clase_ID INNER JOIN usuario c ON b.Alumno_ID=c.id WHERE c.tipo = "profesor";");
+$sentencia = $base_de_datos->query("SELECT a.id, a.nombre, a.fecha, a.hora, a.capacidad, c.nombre FROM clase a INNER JOIN alumno_clase b ON a.id=b.Clase_ID INNER JOIN usuario c ON b.Alumno_ID=c.id WHERE c.tipo = "profesor";");
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 
 ?>
