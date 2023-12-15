@@ -120,7 +120,7 @@ try {
             <li><a href="listarclases.php">Clases</a></li>
         </ul>
     </nav>
-    
+    <h1>Mis clases</h1>
     <table>
         <thead>
             <tr>

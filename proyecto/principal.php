@@ -97,7 +97,7 @@ $tipoUsuario = $_SESSION['tipousuario'];
     <header>
         <h1>Academia de Pintura</h1>
     </header>
-    <h1>Mis clases</h1>
+    
     <nav>
         <ul>
             <?php
@@ -125,37 +125,6 @@ $tipoUsuario = $_SESSION['tipousuario'];
             
             // Generar el menú según el tipo de usuario
             echo generarMenu($tipoUsuario, $id);
-            
-            
-            
-            /*$id = $_SESSION['id'];
-            echo "$id";
-            
-
-            // Lógica para generar el menú según el tipo de usuario
-            function generarMenu($tipoUsuario) {
-                $menu = '';
-                // Elementos comunes para todos los tipos de usuarios
-                $menu .= '<li><a href="principal.php">Inicio</a></li>';
-                $menu .= '<li><a href="perfil.php">Perfil</a></li>';
-                
-                // Elementos específicos para cada tipo de usuario
-                if ($tipoUsuario === 'profesor') {
-                    $menu .= '<li><a href="consultas/listarclases.php">Clases</a></li>';
-
-                } elseif ($tipoUsuario === 'administrador') {
-                    $menu .= '<li><a href="usuarios/listarusuarios.php">Usuarios</a></li>';
-                    $menu .= '<li><a href="clases/listarclases.php">Clases</a></li>';
-
-                } elseif ($tipoUsuario === 'alumno') {
-                    $menu .= '<li><a href="alumno/listar_alumno.php?id=' . $id . '">Clases</a></li>';
-                }
-
-                return $menu;
-            }
-
-            // Generar el menú según el tipo de usuario
-            echo generarMenu($tipoUsuario);*/
             ?>
         </ul>
         <form method="post" action=""> 
