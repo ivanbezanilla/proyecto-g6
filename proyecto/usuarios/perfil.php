@@ -9,7 +9,7 @@ if (isset($_GET['id'])) {
 
 include "../bd/base_de_datos.php"; 
 try {
-    $consulta = $base_de_datos->prepare("SELECT nombre, apellidos, correo FROM usuario WHERE id = ?");
+    $consulta = $base_de_datos->prepare("SELECT * FROM usuario WHERE id = ?");
     $consulta->execute([$id]);
     $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
 
@@ -28,9 +28,6 @@ try {
     <meta charset="UTF-8">
     <title>Perfil de Usuario</title>
     <style>
-        /* Estilos CSS para la página de perfil */
-
-        /* Estilos básicos */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
