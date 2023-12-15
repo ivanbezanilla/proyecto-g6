@@ -1,10 +1,12 @@
 <?php
 include "../bd/base_de_datos.php";
-var_dump($_GET);
-if (isset($_GET["id"]) && !empty($_GET["id"]));
-$id = $_GET["id"];
-$sentencia = $base_de_datos->prepare("SELECT * FROM clase WHERE id = ?;");
-$sentencia->execute([$id]);
+error_reporting(E_ALL);
+$id = isset($_REQUEST["id"]) ? $_REQUEST["id"] : null;
+if ($id !== null && !empty($id));
+$sentencia = $base_de_datos -> prepare ("SELECT * FROM clase WHERE id");
+$sentencia -> bindParam ("id", $id, PDO::PARAM_INT);
+$sentencia -> execute();
+
 $personas = $sentencia -> fetchAll(PDO::FETCH_OBJ);
 
 ?>
