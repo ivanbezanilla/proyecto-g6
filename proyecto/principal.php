@@ -21,8 +21,8 @@ if (isset($_POST['cerrarsesion'])) {
 $correoUsuario = $_SESSION['correo'];
 $tipoUsuario = $_SESSION['tipousuario'];
 if (isset($_SESSION['id'])) {
-    $idUsuario = $_SESSION['id'];
-    echo "$idUsuario";
+    $id = $_SESSION['id'];
+    echo "$id";
 } else {
     echo "El ID de usuario no está definido en la sesión.";
 }
@@ -123,7 +123,7 @@ if (isset($_SESSION['id'])) {
                     $menu .= '<li><a href="clases/listarclases.php">Clases</a></li>';
 
                 } elseif ($tipoUsuario === 'alumno') {
-                    $menu .= '<li><a href="alumno/listar_alumno.php">Clases</a></li>';
+                    $menu .= '<li><a href="alumno/listar_alumno.php?id=' . $id . '">Clases</a></li>';
                 }
 
                 return $menu;

@@ -1,7 +1,7 @@
 <?php
 include "../bd/base_de_datos.php";
-if (isset($_SESSION['id'])) {
-    $id = $_SESSION['id'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
     echo "$id";
 } else {
     echo "El ID de usuario no está definido en la sesión.";
