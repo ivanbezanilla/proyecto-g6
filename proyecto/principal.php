@@ -112,12 +112,12 @@ $tipoUsuario = $_SESSION['tipousuario'];
                 
                 // Elementos específicos para cada tipo de usuario
                 if ($tipoUsuario === 'profesor') {
-                    $menu .= '<li><a href="alumno/listar_alumno.php?id=' . $id . '">Clases</a></li>';
+                    $menu .= '<li><a href="alumno/listar_clase_id.php?id=' . $id . '">Clases</a></li>';
                 } elseif ($tipoUsuario === 'administrador') {
                     $menu .= '<li><a href="usuarios/listarusuarios.php">Usuarios</a></li>';
                     $menu .= '<li><a href="clases/listarclases.php">Clases</a></li>';
                 } elseif ($tipoUsuario === 'alumno') {
-                    $menu .= '<li><a href="alumno/listar_alumno.php?id=' . $id . '">Clases</a></li>';
+                    $menu .= '<li><a href="alumno/listar_clase_id.php?id=' . $id . '">Clases</a></li>';
                 }
             
                 return $menu;
