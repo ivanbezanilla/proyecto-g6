@@ -111,9 +111,6 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             <li><a href="../">Perfil</a></li>
             <li><a href="../usuarios/listarusuarios.php">Usuarios</a></li>
             <li><a href="listarclases.php">Clases</a></li>
-            <form method="post" action=""> 
-                <input type="submit" name="cerrarsesion" value="Cerrar sesion">
-            </form>
         </ul>
     </nav>
     
