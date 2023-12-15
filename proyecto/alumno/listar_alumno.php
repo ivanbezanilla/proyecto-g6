@@ -2,10 +2,11 @@
 include "../bd/base_de_datos.php";
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    echo "$id";
+
 } else {
     echo "El ID de usuario no está definido en la sesión.";
 }
+echo "$id";
 //$id = $_SESSION["id"];
 $sentencia = $base_de_datos->prepare("SELECT * FROM clase WHERE id = ?;");
 $sentencia->execute([$id]);
