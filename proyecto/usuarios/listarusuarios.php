@@ -118,9 +118,9 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             color: #333;
         }
 
-        form input[type="text"],
-        form input[type="password"],
-        form select {
+        input[type="text"],
+        input[type="password"],
+        select {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -128,11 +128,11 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             font-size: 16px;
         }
 
-        form select {
+        select {
             margin-top: 5px;
         }
 
-        form input[type="submit"] {
+        input[type="submit"] {
             background-color: #4CAF50;
             color: white;
             padding: 15px;
@@ -142,7 +142,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             font-size: 18px;
         }
 
-        form input[type="submit"]:hover {
+        input[type="submit"]:hover {
             background-color: #45a049;
         }
 

@@ -99,6 +99,55 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
             cursor: pointer;
         }
 
+        form {
+            width: 50%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        select {
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
     </style>
 </head>
 <body>
