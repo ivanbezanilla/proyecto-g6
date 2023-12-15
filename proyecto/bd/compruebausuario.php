@@ -17,6 +17,7 @@ if ($consulta->rowCount() == 1) {
     $_SESSION['usuario'] = $row['nombre'];
     $_SESSION['correo'] = $row['correo'];
     $_SESSION['tipousuario'] = $row['tipo'];
+    $_SESSION['id'] = $row['id'];
  
     header("Location: ../principal.php");
     exit();
