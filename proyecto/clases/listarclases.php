@@ -12,7 +12,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
     <meta charset="UTF-8">
     <title>Tabla de usuarios</title>
     <style>
-        body {
+        body { 
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
