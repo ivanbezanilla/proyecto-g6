@@ -11,6 +11,50 @@ $sentencia = $base_de_datos->prepare("INSERT INTO clase(nombre, fecha, hora, cap
 $resultado = $sentencia->execute([$nombre, $fecha, $hora, $capacidad]);
 
 
-if($resultado === TRUE) echo "Se ha insertado correctamente";
-else echo "No se ha conseguido insertar, intentalo otra vez";
+if($resultado === FALSE) echo "No se ha conseguido insertar, intentalo otra vez";
 ?>
+<html>
+    <head>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            }
+
+            .container {
+                width: 80%;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 8px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                background-color: #4CAF50;
+                color: #fff;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            }
+
+            .btn:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Clase añadida correctamente</h1>
+            <div class="profile-info">
+                <a href="../principal.php" class="btn">Volver a la página principal</a>
+            </div>
+        </div>
+    </body>
+</html>    
