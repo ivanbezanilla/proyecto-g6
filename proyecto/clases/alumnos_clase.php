@@ -1,6 +1,8 @@
 <?php
 include "../bd/base_de_datos.php";
-$sentencia = $base_de_datos->query("SELECT * FROM usuario;");
+$id = $_GET["id"];
+$sentencia = $base_de_datos->prepare("SELECT b.* FROM alumno_clase a INNER JOIN usuario b ON a.Alumno_ID=b.id WHERE a.Clase_ID = ?;");
+$sentencia->execute([$id]);
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
 
@@ -107,8 +109,8 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
         <ul>
             <li><a href="../principal.php">Inicio</a></li>
             <li><a href="../">Perfil</a></li>
-            <li><a href="listarusuarios.php">Usuarios</a></li>
-            <li><a href="../clases/listarclases.php">Clases</a></li>
+            <li><a href="../usuarios/listarusuarios.php">Usuarios</a></li>
+            <li><a href="listarclases.php">Clases</a></li>
             <form method="post" action=""> 
                 <input type="submit" name="cerrarsesion" value="Cerrar sesion">
             </form>
@@ -124,6 +126,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
                 <th>Nombre</th>
                 <th>Apellidos</th>
                 <th>Email</th>
+                <th>Pass</th>
                 <th>Tipo</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
@@ -136,6 +139,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
                 <td><?php echo $proyecto->nombre ?></td>
                 <td><?php echo $proyecto->apellidos ?></td>
                 <td><?php echo $proyecto->email ?></td>
+                <td><?php echo $proyecto->pass ?></td>
                 <td><?php echo $proyecto->tipo ?></td>
                 <td><a href="<?php echo "./editar_usuario.php?id=" . $proyecto->id?>">Editar</a></td>
                 <td><a href="<?php echo "./eliminar_usuario.php?id=" . $proyecto->id?>">Eliminar</a></td>
