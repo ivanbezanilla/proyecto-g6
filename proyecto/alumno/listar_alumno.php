@@ -1,7 +1,7 @@
 <?php
 include "../bd/base_de_datos.php";
 if (isset($_GET["id"])) 
-    $id = $_GET["id"];
+$id = $_GET["id"];
 $sentencia = $base_de_datos->prepare("SELECT * FROM clase WHERE id = ?;");
 $sentencia -> bindParam (':id', $id, PDO::PARAM_INT);
 $sentencia->execute([$id]);
