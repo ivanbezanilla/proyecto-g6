@@ -1,3 +1,17 @@
+<?php
+
+if (isset($_SESSION['usuario'], $_SESSION['correo'])) {
+    $nombre = $_SESSION['usuario'];
+    $correo = $_SESSION['correo'];
+    $apellidos = $_SESSION['apellidos'];
+    $id = $_SESSION['id'];
+    $tipo = $_SESSION['tipousuario'];
+} else {
+    // Si la información no está disponible redirigimos al usuario
+    header("Location: principal.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -63,9 +77,11 @@
     <div class="container">
         <h1>Perfil de Usuario</h1>
         <div class="profile-info">
+            <p><strong>ID de usuario:</strong> <?php echo $id; ?></p>
             <p><strong>Nombre:</strong> <?php echo $nombre; ?></p>
             <p><strong>Apellidos:</strong> <?php echo $apellidos; ?></p>
             <p><strong>Correo electrónico:</strong> <?php echo $correo; ?></p>
+            <p><strong>Rango de privilegios:</strong> <?php echo $id; ?></p>
             <!-- Agrega más información del perfil si la tienes -->
 
             <!-- Un botón para regresar a la página principal -->
