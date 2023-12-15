@@ -20,12 +20,6 @@ if (isset($_POST['cerrarsesion'])) {
 
 $correoUsuario = $_SESSION['correo'];
 $tipoUsuario = $_SESSION['tipousuario'];
-if (isset($_SESSION['id'])) {
-    $id = $_SESSION['id'];
-    echo "$id";
-} else {
-    echo "El ID de usuario no está definido en la sesión.";
-}
 
 
 ?>
@@ -107,6 +101,13 @@ if (isset($_SESSION['id'])) {
     <nav>
         <ul>
             <?php
+            if (isset($_SESSION['id'])) {
+                $id = $_SESSION['id'];
+                echo "$id";
+            } else {
+                echo "El ID de usuario no está definido en la sesión.";
+            }
+
             // Lógica para generar el menú según el tipo de usuario
             function generarMenu($tipoUsuario) {
                 $menu = '';
