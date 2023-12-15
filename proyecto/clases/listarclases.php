@@ -1,6 +1,6 @@
 <?php
 include "../bd/base_de_datos.php";
-$sentencia = $base_de_datos->query("SELECT a.id, a.nombre, a.fecha, a.hora, a.capacidad, c.nombre as profesor FROM clase a INNER JOIN alumno_clase b ON a.id=b.Clase_ID INNER JOIN usuario c ON b.Alumno_ID=c.id WHERE c.tipo = "profesor";");
+$sentencia = $base_de_datos->query("SELECT * FROM clase;");
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 
 ?>
@@ -123,7 +123,6 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
                 <th>Fecha</th>
                 <th>Hora</th>
                 <th>Capacidad</th>
-                <th>Profesor</th>
                 <th>Alumnos</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
@@ -137,7 +136,6 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
                 <td><?php echo $proyecto->Fecha ?></td>
                 <td><?php echo $proyecto->Hora ?></td>
                 <td><?php echo $proyecto->Capacidad ?></td>
-                <td><?php echo $proyecto->profesor ?></td>
                 <td><a href="<?php echo "./alumnos_clase.php?id=" . $proyecto->ID?>">Alumnos</a></td>
                 <td><a href="<?php echo "./editar_clase.php?id=" . $proyecto->ID?>">Editar</a></td>
                 <td><a href="<?php echo "./eliminar_clase.php?id=" . $proyecto->ID?>">Eliminar</a></td>
