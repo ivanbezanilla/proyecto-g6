@@ -7,11 +7,12 @@ $apellidos = $_POST["apellidos"];
 $email = $_POST["email"];
 $pass = $_POST["pass"];
 $tipo = $_POST["tipo"];
+try {
+    $sentencia = $base_de_datos->prepare("INSERT INTO usuario(nombre, apellidos, email, pass, tipo) VALUES (?, ?, ?, ?, ?);");
+    $resultado = $sentencia->execute([$nombre, $apellidos, $email, $pass, $tipo]);
+    echo "Se ha insertado correctamente";
+}catch(Exception $e){
+    echo "Ocurrio un error:" . $e->getMessage();
+}
 
-$sentencia = $base_de_datos->prepare("INSERT INTO usuario(nombre, apellidos, email, pass, tipo) VALUES (?, ?, ?, ?, ?);");
-$resultado = $sentencia->execute([$nombre, $apellidos, $email, $pass, $tipo]);
-
-
-if($resultado === TRUE) echo "Se ha insertado correctamente";
-else echo "No se ha conseguido insertar, intentalo otra vez";
 ?>

@@ -1,7 +1,11 @@
 <?php
 include "../bd/base_de_datos.php";
-$sentencia = $base_de_datos->query("SELECT * FROM usuario;");
-$personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
+try {
+    $sentencia = $base_de_datos->query("SELECT * FROM usuario;");
+    $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
+}catch(Exception $e){
+    echo "Ocurrio un error:" . $e->getMessage();
+}
 ?>
 
 

@@ -11,8 +11,11 @@ $email = $_POST["email"];
 $pass = $_POST["pass"];
 $tipo = $_POST["tipo"];
 
+try {
 $sentencia = $base_de_datos->prepare("UPDATE usuario SET nombre = ?, apellidos = ?, email = ?, pass = ?, tipo = ? WHERE id = ?;");
 $resultado = $sentencia->execute([$nombre, $apellidos, $email, $pass, $tipo, $id]);
-if($resultado === TRUE) echo "Los cambios se han guardado correctamente";
-else echo "No se ha conseguido guardar los cambios";
+echo "Los cambios se han guardado correctamente";
+}catch(Exception $e){
+    echo "Ocurrio un error:" . $e->getMessage();
+}
 ?>
