@@ -26,9 +26,58 @@ try {
         $insertar_usuario_clase->bindParam(':clase_id', $clase_id);
         $insertar_usuario_clase->execute();
 
-        echo "Usuario agregado correctamente a la clase.";
     }
 }catch(Exception $e){
     echo "Ocurrio un error:" . $e->getMessage();
 }
 ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase añadida correctamente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: #fff;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Usuario agregado correctamente a la clase</h1>
+        <div class="profile-info">
+            <a href="../principal.php" class="btn">Volver a la página principal</a>
+        </div>
+    </div>
+</body>
+</html>

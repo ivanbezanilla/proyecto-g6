@@ -15,7 +15,7 @@ try {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Editar usuario</title>
+    <title>Editar clase</title>
     <style>
         body {
             font-family: Arial, sans-serif;
