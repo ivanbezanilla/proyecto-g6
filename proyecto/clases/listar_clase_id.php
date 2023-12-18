@@ -116,7 +116,7 @@ try {
     <nav>
         <ul>
             <li><a href="../principal.php">Inicio</a></li>
-            <li><a href="../">Perfil</a></li>
+            <li><a href="../usuarios/perfil.php">Perfil</a></li>
             <li><a href="listarclases.php">Clases</a></li>
         </ul>
     </nav>
