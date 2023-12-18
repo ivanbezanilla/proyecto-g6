@@ -19,7 +19,7 @@ try {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Clase añadida correctamente</title>
+    <title>Usuario añadido correctamente</title>
     <style>
         body {
             font-family: Arial, sans-serif;

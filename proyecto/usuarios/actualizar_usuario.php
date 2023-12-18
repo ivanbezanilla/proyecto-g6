@@ -23,7 +23,7 @@ $resultado = $sentencia->execute([$nombre, $apellidos, $email, $pass, $tipo, $id
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Usuario añadido correctamente</title>
+    <title>Usuario actualizado correctamente</title>
     <style>
         body {
             font-family: Arial, sans-serif;
