@@ -6,12 +6,13 @@ $nombre = $_POST["nombre"];
 $fecha = $_POST["fecha"];
 $hora = $_POST["hora"];
 $capacidad = $_POST["capacidad"];
+try {
+    $sentencia = $base_de_datos->prepare("INSERT INTO clase(nombre, fecha, hora, capacidad) VALUES (?, ?, ?, ?);");
+    $resultado = $sentencia->execute([$nombre, $fecha, $hora, $capacidad]);
+}catch(Exception $e){
+    echo "Ocurrio un error:" . $e->getMessage();
+}
 
-$sentencia = $base_de_datos->prepare("INSERT INTO clase(nombre, fecha, hora, capacidad) VALUES (?, ?, ?, ?);");
-$resultado = $sentencia->execute([$nombre, $fecha, $hora, $capacidad]);
-
-
-if($resultado === FALSE) echo "No se ha conseguido insertar, intentalo otra vez";
 ?>
 <!DOCTYPE html>
 <html lang="es">

@@ -1,9 +1,13 @@
 <?php
 include "../bd/base_de_datos.php";
 $id = $_GET["id"];
-$sentencia = $base_de_datos->prepare("SELECT b.* FROM alumno_clase a INNER JOIN usuario b ON a.Alumno_ID=b.id WHERE a.Clase_ID = ?;");
-$sentencia->execute([$id]);
-$personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
+try {
+    $sentencia = $base_de_datos->prepare("SELECT b.* FROM alumno_clase a INNER JOIN usuario b ON a.Alumno_ID=b.id WHERE a.Clase_ID = ?;");
+    $sentencia->execute([$id]);
+    $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
+}catch(Exception $e){
+    echo "Ocurrio un error:" . $e->getMessage();
+}
 ?>
 
 

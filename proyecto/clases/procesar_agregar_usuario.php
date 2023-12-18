@@ -1,7 +1,7 @@
 <?php
 
 // Verificar si se ha enviado información por el formulario
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+try {
     
     // Conectar a la base de datos
     include "../bd/base_de_datos.php";
@@ -27,8 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $insertar_usuario_clase->execute();
 
         echo "Usuario agregado correctamente a la clase.";
-    } else {
-        echo "No se pudo agregar el usuario a la clase. Verifica que la clase y el usuario existan.";
     }
+}catch(Exception $e){
+    echo "Ocurrio un error:" . $e->getMessage();
 }
 ?>

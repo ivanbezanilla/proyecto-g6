@@ -9,9 +9,11 @@ $nombre = $_POST["nombre"];
 $fecha = $_POST["fecha"];
 $hora = $_POST["hora"];
 $capacidad = $_POST["capacidad"];
-
-$sentencia = $base_de_datos->prepare("UPDATE clase SET nombre = ?, fecha = ?, hora = ?, capacidad = ? WHERE id = ?;");
-$resultado = $sentencia->execute([$nombre, $fecha, $hora, $capacidad, $id]);
-if($resultado === TRUE) echo "Los cambios se han guardado correctamente";
-else echo "No se ha conseguido guardar los cambios";
+try {
+	$sentencia = $base_de_datos->prepare("UPDATE clase SET nombre = ?, fecha = ?, hora = ?, capacidad = ? WHERE id = ?;");
+	$resultado = $sentencia->execute([$nombre, $fecha, $hora, $capacidad, $id]);
+	echo "Los cambios se han guardado correctamente";
+}catch(Exception $e){
+    echo "Ocurrio un error:" . $e->getMessage();
+}
 ?>
