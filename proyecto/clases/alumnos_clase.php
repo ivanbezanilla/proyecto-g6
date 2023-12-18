@@ -127,8 +127,7 @@ try {
                 <th>Apellidos</th>
                 <th>Email</th>
                 <th>Tipo</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
+                <th>Eliminar de la clase</th>
             </tr>
         </thead>
         <tbody>
@@ -139,8 +138,7 @@ try {
                 <td><?php echo $proyecto->apellidos ?></td>
                 <td><?php echo $proyecto->email ?></td>
                 <td><?php echo $proyecto->tipo ?></td>
-                <td><a href="<?php echo "./editar_clase.php?id=" . $proyecto->id?>">Editar</a></td>
-                <td><a href="<?php echo "./eliminar_clase.php?id=" . $proyecto->id?>">Eliminar</a></td>
+                <td><a href="<?php echo "./eliminar_alumno_clase.php?id=" . $proyecto->id?>">Eliminar</a></td>
             </tr>
             <?php } ?>
         </tbody>
