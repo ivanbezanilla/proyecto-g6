@@ -98,9 +98,8 @@ try {
         <input value="<?php echo $proyecto->Hora; ?>" name="hora" required type="time" id="hora" />
         <label for="pass">Capacidad:</label>
         <input value="<?php echo $proyecto->Capacidad; ?>" name="capacidad" required type="number" id="capacidad" />
-        <!--<label for="pass">ID Profesor:</label>
-        <input value="<?php echo $proyecto->profesor; ?>" name="profesor" required type="number" id="profesor">-->
-        <input type="submit" value="Guardar cambios">
+        <br><br>
+        <input type="submit" value="Guardar cambios" />
     </form>
 </body>
 </html>
