@@ -89,15 +89,15 @@ try {
 <body>
     <form method="post" action="actualizar_clase.php">
         <label for="editar-clase" >Editar Clase</label>
-        <input type="hidden" name="id" value="<?php echo $proyecto->id; ?>"/>
+        <input type="hidden" name="id" value="<?php echo $proyecto->id; ?>" />
         <label for="nombre">Nombre:</label>
-        <input value="<?php echo $proyecto->nombre ?>" name="nombre" required type="text" id="nombre" placeholder="Escribe tu nombre">
+        <input value="<?php echo $proyecto->nombre ?>" name="nombre" required type="text" id="nombre" placeholder="Escribe tu nombre" />
         <label for="apellidos">Fecha:</label>
-        <input value="<?php echo $proyecto->fecha ?>" name="fecha" required type="date" id="fecha">
+        <input value="<?php echo $proyecto->fecha ?>" name="fecha" required type="date" id="fecha" />
         <label for="email">Hora:</label>
-        <input value="<?php echo $proyecto->hora ?>" name="hora" required type="time" id="hora">
+        <input value="<?php echo $proyecto->hora ?>" name="hora" required type="time" id="hora" />
         <label for="pass">Capacidad:</label>
-        <input value="<?php echo $proyecto->capacidad ?>" name="capacidad" required type="number" id="capacidad">
+        <input value="<?php echo $proyecto->capacidad ?>" name="capacidad" required type="number" id="capacidad" />
         <!--<label for="pass">ID Profesor:</label>
         <input value="<?php echo $proyecto->profesor ?>" name="profesor" required type="number" id="profesor">-->
         <input type="submit" value="Guardar cambios">
