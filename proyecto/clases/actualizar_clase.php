@@ -12,7 +12,6 @@ $capacidad = $_POST["capacidad"];
 try {
 	$sentencia = $base_de_datos->prepare("UPDATE clase SET nombre = ?, fecha = ?, hora = ?, capacidad = ? WHERE id = ?;");
 	$resultado = $sentencia->execute([$nombre, $fecha, $hora, $capacidad, $id]);
-	echo "Los cambios se han guardado correctamente";
 }catch(Exception $e){
     echo "Ocurrio un error:" . $e->getMessage();
 }
