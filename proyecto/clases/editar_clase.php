@@ -89,7 +89,7 @@ try {
 <body>
     <form method="post" action="actualizar_clase.php">
         <label for="editar-clase" >Editar Clase</label>
-        <input type="hidden" name="id" value="<?php echo $proyecto->id; ?>">
+        <input type="hidden" name="id" value="<?php echo $proyecto->id; ?>"/>
         <label for="nombre">Nombre:</label>
         <input value="<?php echo $proyecto->nombre ?>" name="nombre" required type="text" id="nombre" placeholder="Escribe tu nombre">
         <label for="apellidos">Fecha:</label>
