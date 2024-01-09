@@ -7,7 +7,7 @@ $username = $_POST['correo'];
 $password = $_POST['passw'];
 
 try {
-    $consulta = $base_de_datos->prepare("SELECT * FROM usuario WHERE email = :username AND pass = :password");
+    $consulta = $base_de_datos->prepare("SELECT * FROM usuario WHERE email = :username AND pass = MD5(:password)");
     $consulta->bindParam(':username', $username);
     $consulta->bindParam(':password', $password);
     $consulta->execute();
